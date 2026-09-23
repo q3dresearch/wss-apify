@@ -1,0 +1,605 @@
+source_id: apify.store.actors
+status: active                   # endpoints are materialised by examples/refresh_endpoints.py
+cadence: weekly
+schema_id: apifyactor.v1
+
+publisher: Apify
+publisher_tier: first_party
+
+# The store carries NO creation date and NO terminal status. An actor that is
+# unpublished simply stops appearing, and the usage counters are point-in-time
+# with no history behind them: totalUsers30Days on a Tuesday tells you nothing
+# about the Tuesday before. Both halves of what this repo is for -- when an
+# actor arrived and when it left -- exist only in the difference between two
+# captures.
+destroys_own_history: true
+
+# CRAWL PERMISSION IS ESTABLISHED AND UNUSUALLY EXPLICIT. api.apify.com/robots.txt
+# is 13 bytes -- "User-agent: *" with no rules, so nothing is disallowed. apify.com
+# states `Allow: /` AND `Content-Signal: search=yes, ai-input=yes, ai-train=yes`,
+# which is an affirmative grant rather than the mere absence of a refusal. That is
+# permission to FETCH.
+#
+# REUSE IS A DIFFERENT QUESTION AND IT IS NOT ESTABLISHED. No licence statement was
+# found in the API payload and Apify's terms have not been read for a redistribution
+# grant. Do not assert one. Checked 2026-09-24.
+licence: "NOT ESTABLISHED (checked 2026-09-24). Crawling is explicitly permitted (robots + Content-Signal ai-input=yes, ai-train=yes). Redistribution is unaddressed -- no licence field in the payload, terms not read."
+
+# username, userFullName and userPictureUrl identify the DEVELOPER who published
+# the actor. userFullName is frequently a real personal name. These are business
+# counterparties publishing under their own handle, not private individuals, but
+# the field is not `none` and must not be declared as such.
+personal_data: parties_only
+storage: git
+
+notes: >-
+  Every actor in the Apify store, weekly: usage counters, pricing model,
+  categories, review and bookmark counts.
+
+  WHY THIS IS WORTH CAPTURING. `totalUsers30Days` is live paid demand per
+  scraper -- how many people ran this thing last month. Nothing else in the
+  fleet measures whether a data product has customers. But the store publishes
+  only NOW: there is no history endpoint, no changelog, and no created date in
+  the listing, so every number is a single frame with nothing behind it.
+
+  THE ARCHIVE DOES NOT COVER IT, MEASURED. api.apify.com/v2/store has ONE
+  Internet Archive memento, ever. That memento holds 949 of the 48,189 actors it
+  claimed at the time -- 2.0%. The HTML store page apify.com/store has 170
+  mementos, and four sampled ones held between 0 and 40 actor slugs, with
+  totalUsers30Days present in exactly one. So no usage series exists anywhere.
+
+  WHY WEEKLY AND NOT MONTHLY, WHICH WAS THE FIRST ANSWER. Two reasons, both
+  measured rather than preferred. First, the store carries no createdAt, so the
+  only age signal available is FIRST-SEEN ACROSS OUR OWN CAPTURES -- and the
+  resolution of that proxy IS the cadence. Everything appearing between two
+  captures shares one birthday. The actors that matter are young: a stratified
+  sample put the 1-9 monthly-user band at a median age of 104 days and the
+  zero-user band at 323, and one competitor in a six-actor niche was NINE DAYS
+  OLD when read. Monthly would collapse those six entries into five points and
+  erase the order they arrived in, which is the only thing separating a land
+  rush from a steady trickle. Second, totalUsers7Days is a SEVEN-DAY window, so
+  weekly sampling of it is non-overlapping and independent; monthly discards
+  three weeks in four.
+
+  WHAT WEEKLY DOES NOT BUY, STATED SO NOBODY EXPECTS IT. totalUsers30Days is a
+  30-day rolling window: four weekly reads share about 75% of their input, so
+  the usage series carries roughly one independent observation per month however
+  often it is sampled. totalUsers90Days is worse. Weekly sharpens ARRIVAL and
+  DEPARTURE, which is the wss part. It does not sharpen usage.
+
+  THE TRAP IN FIRST-SEEN, WHICH WOULD OTHERWISE POISON A YEAR OF DATA. The store
+  endpoint truncates: pages return items until roughly offset 15,900 and zero
+  after, under every sort order. So an unpartitioned sweep sees a
+  popularity-ordered SLICE, and within that slice an actor first appears when it
+  becomes popular enough to cross the threshold -- NOT when it is created. Those
+  are different events. First-seen is a valid age proxy ONLY inside partitions
+  that enumerate completely. 20 of 23 categories sit under the cap and do;
+  AUTOMATION (~29,700), LEAD_GENERATION (~24,200) and DEVELOPER_TOOLS (~21,700)
+  do not. Age analysis is sound in the small categories and unsound in the three
+  largest, and that is a property of the data, not a bug to be fixed later.
+
+  `total` IS NOT A DENOMINATOR. Same store, same minute, three sort orders
+  returned 66,631 / 73,016 / 70,918, and it drifts upward during a single sweep
+  (65,048 -> 66,630) because the store is written while it is read. Report the
+  count of distinct ids collected and say the true size is unknown.
+
+  `count` IS NOT A COUNT EITHER. The response carries `count`, and it ECHOES THE
+  REQUESTED `limit` -- a page returning zero items still reports count: 1000.
+  Reading it produced two confident and opposite wrong claims about the store's
+  size within minutes. Only `len(items)` means anything, and `limit` is a
+  MAXIMUM: mid-range pages return 384-959 for limit=1000, so a short page is not
+  the end of a partition. Only a zero-item page is.
+
+  PARSED BY parsers/apifyactor_v1.py, keyed on the actor `id`, which is the
+  stable identifier; username/name can both be renamed. `listed` is emitted once
+  per actor per capture and its absence later is the departure signal, since
+  there is no terminal status. `categories` is SORTED before emission -- it is a
+  set served in arbitrary order and would otherwise report a change every week.
+
+endpoints:
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=0"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=1000"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=2000"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=3000"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=4000"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=5000"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=6000"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=7000"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=8000"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=9000"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=10000"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=11000"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=12000"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=13000"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=14000"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=15000"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=0&category=AUTOMATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=1000&category=AUTOMATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=2000&category=AUTOMATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=3000&category=AUTOMATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=4000&category=AUTOMATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=5000&category=AUTOMATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=6000&category=AUTOMATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=7000&category=AUTOMATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=8000&category=AUTOMATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=9000&category=AUTOMATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=10000&category=AUTOMATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=11000&category=AUTOMATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=12000&category=AUTOMATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=13000&category=AUTOMATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=14000&category=AUTOMATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=15000&category=AUTOMATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=0&category=LEAD_GENERATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=1000&category=LEAD_GENERATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=2000&category=LEAD_GENERATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=3000&category=LEAD_GENERATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=4000&category=LEAD_GENERATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=5000&category=LEAD_GENERATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=6000&category=LEAD_GENERATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=7000&category=LEAD_GENERATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=8000&category=LEAD_GENERATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=9000&category=LEAD_GENERATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=10000&category=LEAD_GENERATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=11000&category=LEAD_GENERATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=12000&category=LEAD_GENERATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=13000&category=LEAD_GENERATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=14000&category=LEAD_GENERATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=15000&category=LEAD_GENERATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=0&category=DEVELOPER_TOOLS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=1000&category=DEVELOPER_TOOLS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=2000&category=DEVELOPER_TOOLS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=3000&category=DEVELOPER_TOOLS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=4000&category=DEVELOPER_TOOLS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=5000&category=DEVELOPER_TOOLS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=6000&category=DEVELOPER_TOOLS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=7000&category=DEVELOPER_TOOLS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=8000&category=DEVELOPER_TOOLS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=9000&category=DEVELOPER_TOOLS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=10000&category=DEVELOPER_TOOLS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=11000&category=DEVELOPER_TOOLS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=12000&category=DEVELOPER_TOOLS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=13000&category=DEVELOPER_TOOLS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=14000&category=DEVELOPER_TOOLS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=15000&category=DEVELOPER_TOOLS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=0&category=SOCIAL_MEDIA"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=1000&category=SOCIAL_MEDIA"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=2000&category=SOCIAL_MEDIA"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=3000&category=SOCIAL_MEDIA"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=4000&category=SOCIAL_MEDIA"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=5000&category=SOCIAL_MEDIA"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=6000&category=SOCIAL_MEDIA"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=7000&category=SOCIAL_MEDIA"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=8000&category=SOCIAL_MEDIA"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=9000&category=SOCIAL_MEDIA"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=10000&category=SOCIAL_MEDIA"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=0&category=ECOMMERCE"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=1000&category=ECOMMERCE"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=2000&category=ECOMMERCE"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=3000&category=ECOMMERCE"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=4000&category=ECOMMERCE"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=5000&category=ECOMMERCE"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=6000&category=ECOMMERCE"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=7000&category=ECOMMERCE"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=8000&category=ECOMMERCE"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=9000&category=ECOMMERCE"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=10000&category=ECOMMERCE"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=11000&category=ECOMMERCE"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=12000&category=ECOMMERCE"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=13000&category=ECOMMERCE"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=0&category=OTHER"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=1000&category=OTHER"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=2000&category=OTHER"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=3000&category=OTHER"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=4000&category=OTHER"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=5000&category=OTHER"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=6000&category=OTHER"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=7000&category=OTHER"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=0&category=AI"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=1000&category=AI"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=2000&category=AI"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=3000&category=AI"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=4000&category=AI"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=5000&category=AI"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=6000&category=AI"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=7000&category=AI"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=8000&category=AI"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=0&category=JOBS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=1000&category=JOBS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=2000&category=JOBS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=3000&category=JOBS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=4000&category=JOBS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=5000&category=JOBS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=6000&category=JOBS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=0&category=REAL_ESTATE"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=1000&category=REAL_ESTATE"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=2000&category=REAL_ESTATE"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=3000&category=REAL_ESTATE"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=4000&category=REAL_ESTATE"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=0&category=BUSINESS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=1000&category=BUSINESS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=2000&category=BUSINESS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=3000&category=BUSINESS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=4000&category=BUSINESS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=5000&category=BUSINESS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=6000&category=BUSINESS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=7000&category=BUSINESS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=0&category=SEO_TOOLS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=1000&category=SEO_TOOLS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=2000&category=SEO_TOOLS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=3000&category=SEO_TOOLS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=4000&category=SEO_TOOLS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=0&category=VIDEOS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=1000&category=VIDEOS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=2000&category=VIDEOS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=3000&category=VIDEOS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=0&category=AGENTS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=1000&category=AGENTS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=2000&category=AGENTS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=3000&category=AGENTS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=0&category=INTEGRATIONS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=1000&category=INTEGRATIONS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=2000&category=INTEGRATIONS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=0&category=NEWS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=1000&category=NEWS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=2000&category=NEWS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=3000&category=NEWS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=0&category=TRAVEL"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=1000&category=TRAVEL"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=2000&category=TRAVEL"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=0&category=MCP_SERVERS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=1000&category=MCP_SERVERS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=2000&category=MCP_SERVERS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=0&category=MARKETING"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=1000&category=MARKETING"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=2000&category=MARKETING"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=0&category=OPEN_SOURCE"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=0&category=SPORTS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=0&category=FOR_CREATORS"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=0&category=EDUCATION"
+    delay_seconds: 2
+    timeout_seconds: 90
+  - url: "https://api.apify.com/v2/store?limit=1000&offset=0&category=GAMES"
+    delay_seconds: 2
+    timeout_seconds: 90
+
+gates:
+  expect_status: 200
+  # A zero-item page is ~120 bytes of envelope; a real page is tens of KB.
+  # refresh_endpoints.py only writes endpoints it saw return items, so a page
+  # that has gone empty since is a genuine change worth quarantining.
+  min_bytes: 2000
+  content_type_any: [json]
+  must_contain: ["totalUsers30Days", "\"items\""]
+  # NO must_not_contain, DELIBERATELY, AND THIS WAS MEASURED THE HARD WAY.
+  # The first version blacklisted "Access Denied", "Too Many Requests" and
+  # "rate limit". It quarantined 54 of the first 64 pages -- 84% -- because
+  # this is a store of SCRAPERS and their descriptions discuss rate limits
+  # constantly. The gate matched the publisher's content, not an error page.
+  #
+  # A text blacklist cannot work on an endpoint whose payload is arbitrary
+  # user-written prose: any phrase an error page might use, some developer has
+  # already put in a description. The positive gates do the work instead --
+  # expect_status, content_type_any, min_bytes, and must_contain on a field
+  # name that only a real store response carries.
+  # Deliberately loose. The store is WRITTEN WHILE IT IS READ -- `total` drifted
+  # 65,048 -> 66,630 inside one sweep -- so page N holds a different slice each
+  # week and a mid-range page legitimately returns anywhere from 384 to 959
+  # items for the same limit=1000. A tight shrink gate would quarantine normal
+  # churn. min_bytes plus must_contain is what actually catches a bad response.
+  max_shrink_pct: 90

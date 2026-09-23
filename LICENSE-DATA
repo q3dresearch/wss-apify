@@ -1,0 +1,45 @@
+# Licence of the captured data
+
+**Crawl permission: established, and unusually explicit.**
+**Reuse permission: NOT established. Do not assert one.**
+
+These are different questions and this file keeps them apart.
+
+## Crawling
+
+Checked 2026-09-24. `api.apify.com/robots.txt` is **13 bytes** -- `User-agent: *`
+with no rules beneath it, so nothing is disallowed. Evaluated with
+`webprobes/robots.py` on longest match, never a substring test.
+
+`apify.com/robots.txt` goes further than silence:
+
+    User-agent: *
+    Content-Signal: search=yes, ai-input=yes, ai-train=yes
+    Allow: /
+
+That is an **affirmative grant** rather than the absence of a refusal, and it
+names AI input and training specifically. Very few publishers in this fleet
+state anything at all; this one opts in.
+
+## Reuse and redistribution
+
+**Unaddressed.** No licence field appears anywhere in the API payload -- unlike,
+say, the Environment Agency, which states OGL v3 in `meta.licence` on every
+response. Apify's terms of service have **not** been read for a redistribution
+grant, so nothing here should be taken as one.
+
+Permission to fetch is not permission to republish. Until someone reads the
+terms and records what they say, treat the captured bytes as material this repo
+holds, not material it licenses onward.
+
+## Personal data
+
+The store carries `username`, `userFullName` and `userPictureUrl` identifying the
+developer who published each actor. `userFullName` is frequently a real personal
+name. These are business counterparties publishing under their own handle rather
+than private individuals, which is why the registry declares
+`personal_data: parties_only` and not `none`.
+
+The parser emits `username` and drops `userFullName` and `userPictureUrl`: the
+handle is the joinable identifier, the display name and photograph are not
+needed for any question this repo asks.

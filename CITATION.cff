@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it."
+type: dataset
+title: "Apify Actor Store, captured weekly (wss-apify)"
+abstract: >-
+  Weekly point-in-time captures of the Apify actor store: usage counters
+  (7-, 30- and 90-day active users, total users, total runs), pricing model,
+  categories, review and bookmark counts for every actor reachable through the
+  public store API. The store publishes only the present -- there is no history
+  endpoint, no changelog, and no creation date in the listing -- and an actor
+  that is unpublished simply stops being returned. The Internet Archive holds a
+  single memento of the store API, containing 949 of the 48,189 actors it
+  claimed at the time, so no usage series exists anywhere else. The endpoint
+  truncates near offset 15,900 while reporting a total near 66,000, so the sweep
+  is partitioned by category and coverage is reported as a count of distinct
+  actors rather than as a share of any claimed total.
+authors:
+  - name: "q3dresearch"
+    website: "https://github.com/q3dresearch"
+keywords:
+  - git-scraping
+  - open-data
+  - point-in-time-data
+  - dataset
+  - web-scraping
+  - marketplace
