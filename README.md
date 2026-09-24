@@ -46,7 +46,24 @@ roughly one independent observation per month however often it is sampled, and
 `totalUsers90Days` is worse. Weekly sharpens **arrival and departure**. It does
 not sharpen usage.
 
-At the projected size this costs about **0.14 GB a year** in git.
+**Storage, measured rather than projected.** One capture is **67 MB of raw** (160 pages,
+~0.42 MB gzipped each), so weekly is **~3.5 GB a year** and daily would be ~24 GB. An
+earlier estimate of 0.14 GB/yr was wrong: it was computed on a *projected* field set,
+and wss stores the raw response. There is no way to fetch less — `fields`, `select`,
+`desc=false`, `minimal` and `view=compact` are all silently ignored and return
+byte-identical output — and the 2.16x partition overlap is inherent, because actors
+genuinely carry several categories. This likely wants `storage: object` (R2).
+
+The one droppable block is the `ALL` partition: 16 of 160 pages, uniquely contributing
+**431 actors of 51,449 (0.8%)**. It is kept, because those are the *uncategorised*
+actors and nothing else would ever see them — 10% of cost for a permanent blind spot is
+the wrong trade in a repo whose whole premise is that capture is irreversible.
+
+**The cron is temporarily DAILY**, to prove the schedule fires — GitHub's scheduler
+often skips or delays the first runs on a new repo, and a weekly job takes a month to
+report that it is broken. The registry still declares `cadence: weekly` and the
+workflow's `CADENCE` still says weekly, so `wss plan` keeps matching; only the wake-up
+frequency changed. Revert the cron to `35 3 * * 1` once proven.
 
 ## Three fields that look like measurements and are not
 

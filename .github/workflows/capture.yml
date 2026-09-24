@@ -1,11 +1,25 @@
 # One source, one partitioned sweep. The three-stage plan/shard/artifact dance
 # in the fleet template exists to fan thousands of endpoints across 20 runners;
 # here ~200 endpoints run in one job in a few minutes.
-name: capture-weekly
+name: capture
 
 on:
   schedule:
-    - cron: "35 3 * * 1" # Monday, off the hour -- GitHub's scheduler is contended at :00
+    # TEMPORARILY DAILY, TO PROVE THE SCHEDULE ACTUALLY FIRES. GitHub's cron is
+    # best-effort and its first runs on a new repo are often delayed or skipped
+    # entirely, so a weekly job takes a month to tell you it is broken. Daily
+    # gives seven answers a week. REVERT TO "35 3 * * 1" (Monday) once proven.
+    #
+    # This is a CRON frequency, not a cadence change. The registry still says
+    # `cadence: weekly` and CADENCE below still says weekly, so `wss plan` keeps
+    # matching the source -- the two must agree or plan returns [] and the job
+    # goes green having captured nothing. What changes is only how often the
+    # runner wakes up.
+    #
+    # THE PRICE, SO IT IS NOT DISCOVERED LATER: one capture is 67 MB of raw.
+    # Daily is ~24 GB/year against weekly's ~3.5 GB. Fine for a few days of
+    # proving the cron; not something to leave running.
+    - cron: "35 3 * * *" # daily, off the hour -- GitHub's scheduler is contended at :00
   workflow_dispatch:
 
 permissions:
