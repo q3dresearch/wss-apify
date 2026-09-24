@@ -78,7 +78,7 @@ def main():
         f"denominator — see the coverage plate.",
         size=10, fill=MUTED, chars=132, leading=13)
     s.append("</svg>")
-    out = here.parents[1] / "charts" / "usage-concentration.svg"
+    out = here.parent / "charts" / "usage-concentration.svg"
     out.write_text("\n".join(s), encoding="utf-8")
     print(f"  wrote {out.name}  (top1%={top1}%, median={st['u30_median']})")
     return 0

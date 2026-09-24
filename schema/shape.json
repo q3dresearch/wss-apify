@@ -1,0 +1,381 @@
+{
+  "generated_at": "2026-09-24T03:16:46Z",
+  "note": "Inferred from the derived rows by `wss schema`, not hand-written. Regenerate after any derive.",
+  "sources": {
+    "apify.store.actors": {
+      "source_id": "apify.store.actors",
+      "schema_id": "apifyactor.v1",
+      "cadence": "weekly",
+      "licence": "NOT ESTABLISHED (checked 2026-09-24). Crawling is explicitly permitted (robots + Content-Signal ai-input=yes, ai-train=yes). Redistribution is unaddressed -- no licence field in the payload, terms not read.",
+      "personal_data": "parties_only",
+      "storage": "git",
+      "publisher": "Apify",
+      "publisher_tier": "first_party",
+      "endpoints": 160
+    }
+  },
+  "observations": {
+    "rows": 2097427,
+    "columns": [
+      "series_id",
+      "entity_id",
+      "observed_at",
+      "captured_at",
+      "metric",
+      "value",
+      "unit",
+      "source_id",
+      "raw_ref",
+      "parser_version"
+    ],
+    "partitions": [
+      "2026-09.csv.gz"
+    ],
+    "series": {
+      "apify.store.actors": {
+        "rows": 2097427,
+        "entities": 51907,
+        "entity_id_samples": [
+          "001Q50LgYYIXgA6o1",
+          "003lUvaaNz3fFBefF",
+          "00Gm3NAMROOL5MUe9"
+        ],
+        "metrics": [
+          "badge",
+          "bookmark_count",
+          "builds_total",
+          "categories",
+          "last_run_started_at",
+          "listed",
+          "name",
+          "pricing_model",
+          "review_count",
+          "review_rating",
+          "runs_total",
+          "source_partition",
+          "title",
+          "username",
+          "users_30d",
+          "users_7d",
+          "users_90d",
+          "users_total"
+        ]
+      }
+    },
+    "parser_versions": [
+      "1"
+    ]
+  },
+  "metrics": {
+    "badge": {
+      "rows": 73,
+      "unit": "",
+      "type": "text",
+      "series": [
+        "apify.store.actors"
+      ],
+      "entities": 20,
+      "distinct_values": 1,
+      "empty": 0,
+      "samples": [
+        "risingStar"
+      ]
+    },
+    "bookmark_count": {
+      "rows": 123400,
+      "unit": "bookmarks",
+      "type": "number",
+      "series": [
+        "apify.store.actors"
+      ],
+      "entities": 51907,
+      "distinct_values": 216,
+      "empty": 0,
+      "min": "0",
+      "max": "5122",
+      "samples": [
+        "0",
+        "1",
+        "10"
+      ]
+    },
+    "builds_total": {
+      "rows": 123400,
+      "unit": "builds",
+      "type": "number",
+      "series": [
+        "apify.store.actors"
+      ],
+      "entities": 51907,
+      "distinct_values": 501,
+      "empty": 0,
+      "min": "1",
+      "max": "4588",
+      "samples": [
+        "1",
+        "10",
+        "100"
+      ]
+    },
+    "categories": {
+      "rows": 123087,
+      "unit": "",
+      "type": "text",
+      "series": [
+        "apify.store.actors"
+      ],
+      "entities": 51600,
+      "distinct_values": 983,
+      "empty": 0,
+      "samples": [
+        "AGENTS",
+        "AGENTS; AI",
+        "AGENTS; AI; AUTOMATION"
+      ]
+    },
+    "last_run_started_at": {
+      "rows": 123267,
+      "unit": "",
+      "type": "date",
+      "series": [
+        "apify.store.actors"
+      ],
+      "entities": 51829,
+      "distinct_values": 51802,
+      "empty": 0,
+      "min": "2025-05-06T14:05:39.908Z",
+      "max": "2026-09-24T02:07:18.016Z",
+      "samples": [
+        "2025-05-06T14:05:39.908Z",
+        "2025-07-01T17:17:27.479Z",
+        "2025-08-30T13:43:28.340Z"
+      ]
+    },
+    "listed": {
+      "rows": 123400,
+      "unit": "count",
+      "type": "bool",
+      "series": [
+        "apify.store.actors"
+      ],
+      "entities": 51907,
+      "distinct_values": 1,
+      "empty": 0,
+      "samples": [
+        "1"
+      ]
+    },
+    "name": {
+      "rows": 123400,
+      "unit": "",
+      "type": "text",
+      "series": [
+        "apify.store.actors"
+      ],
+      "entities": 51907,
+      "distinct_values": 36767,
+      "empty": 0,
+      "samples": [
+        "104-company-reviews-urls-opp-scraper",
+        "104-scraper",
+        "10times"
+      ]
+    },
+    "pricing_model": {
+      "rows": 123400,
+      "unit": "",
+      "type": "text",
+      "series": [
+        "apify.store.actors"
+      ],
+      "entities": 51907,
+      "distinct_values": 2,
+      "empty": 0,
+      "samples": [
+        "FREE",
+        "PAY_PER_EVENT"
+      ]
+    },
+    "review_count": {
+      "rows": 123400,
+      "unit": "reviews",
+      "type": "number",
+      "series": [
+        "apify.store.actors"
+      ],
+      "entities": 51907,
+      "distinct_values": 92,
+      "empty": 0,
+      "min": "0",
+      "max": "1817",
+      "samples": [
+        "0",
+        "1",
+        "10"
+      ]
+    },
+    "review_rating": {
+      "rows": 123400,
+      "unit": "stars",
+      "type": "number",
+      "series": [
+        "apify.store.actors"
+      ],
+      "entities": 51907,
+      "distinct_values": 803,
+      "empty": 0,
+      "min": "0.0",
+      "max": "5.0",
+      "samples": [
+        "0.0",
+        "1.0",
+        "1.009"
+      ]
+    },
+    "runs_total": {
+      "rows": 123400,
+      "unit": "runs",
+      "type": "number",
+      "series": [
+        "apify.store.actors"
+      ],
+      "entities": 51907,
+      "distinct_values": 5342,
+      "empty": 0,
+      "min": "0",
+      "max": "199055978",
+      "samples": [
+        "0",
+        "1",
+        "10"
+      ]
+    },
+    "source_partition": {
+      "rows": 123400,
+      "unit": "",
+      "type": "text",
+      "series": [
+        "apify.store.actors"
+      ],
+      "entities": 51907,
+      "distinct_values": 24,
+      "empty": 0,
+      "samples": [
+        "AGENTS",
+        "AI",
+        "ALL"
+      ]
+    },
+    "title": {
+      "rows": 123400,
+      "unit": "",
+      "type": "text",
+      "series": [
+        "apify.store.actors"
+      ],
+      "entities": 51907,
+      "distinct_values": 46422,
+      "empty": 0,
+      "samples": [
+        "$0.375/1000 Twitter / X API Flat & Simple",
+        "$0.65/1K 💚 Immobiliare.it Scraper - Listings & Agencies",
+        "$0.7/1K 💙 Fotocasa.es Real Estate Scraper"
+      ]
+    },
+    "username": {
+      "rows": 123400,
+      "unit": "",
+      "type": "text",
+      "series": [
+        "apify.store.actors"
+      ],
+      "entities": 51907,
+      "distinct_values": 2692,
+      "empty": 0,
+      "samples": [
+        "01010101",
+        "0200project",
+        "0meetsares"
+      ]
+    },
+    "users_30d": {
+      "rows": 123400,
+      "unit": "users",
+      "type": "number",
+      "series": [
+        "apify.store.actors"
+      ],
+      "entities": 51907,
+      "distinct_values": 498,
+      "empty": 0,
+      "min": "0",
+      "max": "44184",
+      "samples": [
+        "0",
+        "1",
+        "10"
+      ]
+    },
+    "users_7d": {
+      "rows": 123400,
+      "unit": "users",
+      "type": "number",
+      "series": [
+        "apify.store.actors"
+      ],
+      "entities": 51907,
+      "distinct_values": 337,
+      "empty": 0,
+      "min": "0",
+      "max": "23235",
+      "samples": [
+        "0",
+        "1",
+        "10"
+      ]
+    },
+    "users_90d": {
+      "rows": 123400,
+      "unit": "users",
+      "type": "number",
+      "series": [
+        "apify.store.actors"
+      ],
+      "entities": 51907,
+      "distinct_values": 695,
+      "empty": 0,
+      "min": "0",
+      "max": "78710",
+      "samples": [
+        "0",
+        "1",
+        "10"
+      ]
+    },
+    "users_total": {
+      "rows": 123400,
+      "unit": "users",
+      "type": "number",
+      "series": [
+        "apify.store.actors"
+      ],
+      "entities": 51907,
+      "distinct_values": 1336,
+      "empty": 0,
+      "min": "0",
+      "max": "615788",
+      "samples": [
+        "0",
+        "1",
+        "10"
+      ]
+    }
+  },
+  "raw": {
+    "files": 160,
+    "bytes_on_disk": 35038919,
+    "capture_dates": 1,
+    "first_capture": "2026-09-24T02:02:30Z",
+    "last_capture": "2026-09-24T02:11:45Z"
+  }
+}

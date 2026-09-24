@@ -23,7 +23,7 @@ changelog, no creation date in the listing, and no status meaning withdrawn. An
 actor that is unpublished simply stops being returned. So both ends of its life,
 arrival and departure, exist only as a difference between two captures.
 
-![Half the store has exactly one user a month](examples/artifacts/charts/usage-concentration.svg)
+![Half the store has exactly one user a month](examples/charts/usage-concentration.svg)
 
 **There is no typical actor.** The median has **one** user in 30 days and the
 largest has 44,184; the top 1% holds **78%** of all users and **70% have one user
@@ -50,18 +50,18 @@ next thing to build.
 
 ## What you can build
 
-Figures come from [`examples/artifacts/scripts/`](examples/artifacts/scripts) —
+Figures come from [`examples/`](examples) —
 stdlib only, deterministic, no network at draw time.
 **[examples/data-shape.md](examples/data-shape.md) is the place to start**: the
 three figures plus the seven traps in this data, each with its number.
 
-![4 of 24 partitions stop at the wall](examples/artifacts/charts/partition-coverage.svg)
+![4 of 24 partitions stop at the wall](examples/charts/partition-coverage.svg)
 
 **The sweep is partial and knows which parts.** 123,400 rows collapse to 51,907
 distinct actors; 14,473 appear in exactly one partition, so the overlap is real
 actors carrying several categories rather than redundant fetching.
 
-![The three most expensive fields are the three nobody would query](examples/artifacts/charts/field-volatility.svg)
+![The three most expensive fields are the three nobody would query](examples/charts/field-volatility.svg)
 
 **Cost and volatility are independent, which is what made a 48% cut free.**
 
@@ -77,7 +77,7 @@ duckdb -c "SELECT * FROM read_csv_auto('$B/2026-09.csv.gz') LIMIT 5"
 ```bash
 python examples/load_observations.py     # sqlite + the queries in queries.sql
 python examples/cron_report.py           # did the cron fire, on time, every time
-python examples/artifacts/scripts/store_stats.py --out stats.json   # from the repo root
+python examples/store_stats.py --out stats.json   # from the repo root
 ```
 
 Columns are `series_id, entity_id, observed_at, captured_at, metric, value, unit,

@@ -4,14 +4,14 @@
 
 One weekly capture is **160 pages → 51,907 distinct actors → ~2.1M observations**,
 35 MB of raw. Three figures below, then the traps. Every number here came from
-`artifacts/scripts/store_stats.py` against the committed captures; nothing is quoted
+`../store_stats.py` against the committed captures; nothing is quoted
 from memory.
 
 ---
 
 ## 1. The distribution is a cliff, and it has no typical member
 
-![usage concentration](artifacts/charts/usage-concentration.svg)
+![usage concentration](charts/usage-concentration.svg)
 
 **Median actor: 1 user in 30 days. Largest: 44,184. Top 1% holds 78% of all users.**
 26,020 actors have exactly one user and 10,096 have none — **70% have one or zero**.
@@ -22,7 +22,7 @@ report the head and the tail separately — see `isolate-the-tail-as-its-own-stu
 
 ## 2. The sweep is partial, and it knows which parts
 
-![partition coverage](artifacts/charts/partition-coverage.svg)
+![partition coverage](charts/partition-coverage.svg)
 
 The API stops serving items near **offset 15,900** under every sort order while reporting
 a total near 66,000. So the sweep is partitioned by category — and **4 of 24 partitions
@@ -36,7 +36,7 @@ mixes two different events.
 
 ## 3. What is worth storing is not what is worth watching
 
-![field volatility](artifacts/charts/field-volatility.svg)
+![field volatility](charts/field-volatility.svg)
 
 Read it as four corners. **Top-left is pure waste** — big and static — and that is exactly
 where the three dropped fields sat (`userPictureUrl` 20.0% of payload / 7.3% changed,
@@ -94,10 +94,10 @@ showing up repeatedly.
 ## Rebuilding these
 
 ```
-python3 examples/artifacts/scripts/store_stats.py --out stats.json   # from the repo root
-python3 examples/artifacts/scripts/chart-usage-concentration.py stats.json
-python3 examples/artifacts/scripts/chart-partition-coverage.py stats.json
-python3 examples/artifacts/scripts/chart-field-volatility.py stats.json
+python3 examples/store_stats.py --out stats.json   # from the repo root
+python3 examples/chart-usage-concentration.py stats.json
+python3 examples/chart-partition-coverage.py stats.json
+python3 examples/chart-field-volatility.py stats.json
 ```
 
 `store_stats.py` must run from the **repo root** — `raw_ref` paths in the manifest are

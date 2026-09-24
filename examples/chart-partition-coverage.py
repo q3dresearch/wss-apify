@@ -64,7 +64,7 @@ def main():
         "threshold, not when it is published — first-seen is an age only in the partitions that end early.",
         size=10, fill=MUTED, chars=132, leading=13)
     s.append("</svg>")
-    out = here.parents[1] / "charts" / "partition-coverage.svg"
+    out = here.parent / "charts" / "partition-coverage.svg"
     out.write_text("\n".join(s), encoding="utf-8")
     print(f"  wrote {out.name}  ({len(hit)} at the wall of {len(rows)})")
     return 0

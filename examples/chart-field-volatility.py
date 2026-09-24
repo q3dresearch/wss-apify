@@ -86,7 +86,7 @@ def main():
         f"and changes back.",
         size=10, fill=MUTED, chars=132, leading=13)
     s.append("</svg>")
-    out = here.parents[1] / "charts" / "field-volatility.svg"
+    out = here.parent / "charts" / "field-volatility.svg"
     out.write_text("\n".join(s), encoding="utf-8")
     print(f"  wrote {out.name}  ({len(V)} fields)")
     return 0

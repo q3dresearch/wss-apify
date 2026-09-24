@@ -11,7 +11,7 @@ from __future__ import annotations
 import argparse, collections, gzip, json, pathlib, sys
 
 HERE = pathlib.Path(__file__).resolve()
-REPO = HERE.parents[3]
+REPO = HERE.parents[1]
 SCRATCH = pathlib.Path("/tmp/claude-1000/-home-david-Desktop-programming-web-snapshots"
                        "/7e6169e6-34c2-4d59-be3a-6b67706ec03f/scratchpad")
 
