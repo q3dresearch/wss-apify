@@ -94,6 +94,11 @@ object config resolves empty and the job cannot write a byte.
 
 ## Questions this exists to answer
 
+![2 of 7 questions are answered now; 2 wait on the capture; 3 are not on a clock at all.](examples/charts/maturity.svg)
+
+**2 of these 7 are answered from captures already held.** 2 become answerable only as the series lengthens — the plate shows when. The remaining 3 are not on a clock: they need a method, or a field this source does not publish, and waiting produces neither. That distinction is the one a reader cannot make from a table of open questions.
+
+
 A source that answers no question gets dropped. A question nothing answers is the
 next thing to build.
 
