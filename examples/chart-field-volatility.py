@@ -27,9 +27,8 @@ def main():
 
     s = plate.open_svg(W, H,
         "The three most expensive fields are the three nobody would query",
-        subtitle=f"Share of the stored payload against how often a field changed, over the 37 days "
-                 f"between the single archive memento and this capture. One mark per field, "
-                 f"{overlap} actors present in both.")
+        subtitle=f"Payload share against change rate, one mark per field, over 37 days. "
+                 f"{overlap} actors present in both captures.")
     f, y = plate.frame(W, 88,
         who="Anyone deciding what to keep, what to drop, and what a weekly diff will surface",
         decide="Which fields earn their bytes, and which changes are worth alerting on",

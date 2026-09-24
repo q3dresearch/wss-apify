@@ -28,8 +28,8 @@ def main():
 
     s = plate.open_svg(W, H,
         f"{len(hit)} of {len(rows)} partitions stop at the wall, not at the end of their data",
-        subtitle="Rows returned per partition in one sweep. The API stops serving items near "
-                 "offset 15,900 under every sort order, while reporting a total near 66,000.")
+        subtitle="Rows per partition in one sweep. Items stop near offset 15,900 under "
+                 "every sort order, against a reported total near 66,000.")
     f, y = plate.frame(W, 88,
         who="Anyone about to report how many actors are on Apify, or how many are dead",
         decide="Whether to quote a store total at all, and which partitions can carry an age",
