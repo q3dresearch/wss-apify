@@ -36,6 +36,18 @@ def main() -> int:
 
     root = REPO
     import csv
+
+    # READ THROUGH THE STORE, NEVER OFF THE FILESYSTEM. This source declares
+    # `storage: object`, so raw/ is empty locally and the bytes are in R2. The
+    # first version did `open(r["raw_ref"], "rb")` and died with FileNotFoundError
+    # the moment storage moved -- the same mistake the sequence warns about when
+    # it says never to test for capture by counting raw/ files. `store_for`
+    # returns a LocalStore or an ObjectStore depending on the registry, and
+    # `read` un-gzips either way.
+    sys.path.insert(0, str(REPO.parent / "wss-engine"))
+    from wss import registry as _reg, storage as _st
+    store = _st.store_for(_reg.load_registry(REPO)[0], REPO)
+
     man = []
     for f in (REPO / "manifest").glob("*/*.csv"):
         man += list(csv.DictReader(open(f)))
@@ -44,7 +56,7 @@ def main() -> int:
     for r in man:
         if r["outcome"] not in ("first_capture", "changed"): continue
         p = partition(r["url"]); off = int(r["url"].split("offset=", 1)[1].split("&", 1)[0])
-        items = json.loads(gzip.decompress(open(r["raw_ref"], "rb").read()))["data"]["items"]
+        items = json.loads(store.read(r["raw_ref"]))["data"]["items"]
         d = by_part[p]; d["pages"] += 1; d["rows"] += len(items); d["max_offset"] = max(d["max_offset"], off)
         for x in items:
             actors.setdefault(x["id"], x)
