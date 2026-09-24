@@ -168,3 +168,5 @@ declaration.
 | `raw/`, `manifest/` | captured bytes and the append-only capture log |
 | `examples/queries.sql` | arrivals, departures, the dead-bet rate with age, coverage |
 | `examples/cron_report.py` | did the cron fire, on time, every time — replayed from git history |
+| `examples/data-shape.md` | **start here** — what one capture looks like and the seven traps in it |
+| `examples/artifacts/` | three figures and the scripts that build them |

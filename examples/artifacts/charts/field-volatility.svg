@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="600" viewBox="0 0 880 600" font-family='system-ui, -apple-system, "Segoe UI", sans-serif'><rect width="880" height="600" fill="#fcfcfb"/>
+<text x="28.0" y="40.0" font-size="19" fill="#0b0b0b" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">The three most expensive fields are the three nobody would query</text>
+<text x="28.0" y="60.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">Share of the stored payload against how often a field changed, over the 37 days between the single archive memento and this capture. One mark per field, 784 actors present in both.</text>
+<text x="28.0" y="88.0" font-size="8.5" fill="#8a8880" text-anchor="start" font-weight="700" letter-spacing="0.9" style="font-variant-numeric: tabular-nums">FOR</text>
+<text x="28.0" y="103.0" font-size="11.5" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">Anyone deciding what to keep, what to drop,</text>
+<text x="28.0" y="116.5" font-size="11.5" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">and what a weekly diff will surface</text>
+<text x="302.7" y="88.0" font-size="8.5" fill="#8a8880" text-anchor="start" font-weight="700" letter-spacing="0.9" style="font-variant-numeric: tabular-nums">DECIDE</text>
+<text x="302.7" y="103.0" font-size="11.5" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">Which fields earn their bytes, and which</text>
+<text x="302.7" y="116.5" font-size="11.5" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">changes are worth alerting on</text>
+<text x="577.3" y="88.0" font-size="8.5" fill="#8a8880" text-anchor="start" font-weight="700" letter-spacing="0.9" style="font-variant-numeric: tabular-nums">WRONG IF</text>
+<text x="577.3" y="103.0" font-size="11.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">Cost and volatility line up — then there is</text>
+<text x="577.3" y="116.5" font-size="11.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">no free cut, only trade-offs</text>
+<line x1="28" y1="126.0" x2="852" y2="126.0" stroke="#e3e2db"/>
+<line x1="86.0" y1="170.0" x2="86.0" y2="504" stroke="#f0efe9"/>
+<text x="86.0" y="521.0" font-size="10" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">0</text>
+<line x1="241.5" y1="170.0" x2="241.5" y2="504" stroke="#f0efe9"/>
+<text x="241.5" y="521.0" font-size="10" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">25</text>
+<line x1="397.0" y1="170.0" x2="397.0" y2="504" stroke="#f0efe9"/>
+<text x="397.0" y="521.0" font-size="10" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">50</text>
+<line x1="552.5" y1="170.0" x2="552.5" y2="504" stroke="#f0efe9"/>
+<text x="552.5" y="521.0" font-size="10" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">75</text>
+<line x1="708.0" y1="170.0" x2="708.0" y2="504" stroke="#f0efe9"/>
+<text x="708.0" y="521.0" font-size="10" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">100</text>
+<line x1="86" y1="461.7" x2="708" y2="461.7" stroke="#f0efe9"/>
+<text x="77.0" y="465.2" font-size="10" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">0.01</text>
+<line x1="86" y1="380.7" x2="708" y2="380.7" stroke="#f0efe9"/>
+<text x="77.0" y="384.2" font-size="10" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">0.1</text>
+<line x1="86" y1="299.7" x2="708" y2="299.7" stroke="#f0efe9"/>
+<text x="77.0" y="303.2" font-size="10" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">1</text>
+<line x1="86" y1="218.7" x2="708" y2="218.7" stroke="#f0efe9"/>
+<text x="77.0" y="222.2" font-size="10" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">10</text>
+<text x="77.0" y="144.0" font-size="10" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">% of stored</text>
+<text x="77.0" y="155.0" font-size="10" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">payload</text>
+<text x="397.0" y="540.0" font-size="10.5" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">% of actors whose value changed in 37 days</text>
+<circle cx="264.1" cy="175.1" r="8.0" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<text x="278.1" y="178.6" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="9.5" text-anchor="start" font-weight="500" style="font-variant-numeric: tabular-nums">pricing.pricingPerEvent</text>
+<text x="278.1" y="178.6" fill="#52514e" font-size="9.5" text-anchor="start" font-weight="500" style="font-variant-numeric: tabular-nums">pricing.pricingPerEvent</text>
+<circle cx="131.6" cy="194.4" r="7.3" fill="#b4472e" fill-opacity="0.9" stroke="#fcfcfb" stroke-width="1.1"/>
+<text x="144.9" y="197.9" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="9.5" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">userPictureUrl  (dropped)</text>
+<text x="144.9" y="197.9" fill="#b4472e" font-size="9.5" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">userPictureUrl  (dropped)</text>
+<circle cx="106.1" cy="210.6" r="6.1" fill="#b4472e" fill-opacity="0.9" stroke="#fcfcfb" stroke-width="1.1"/>
+<text x="118.2" y="214.1" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="9.5" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">pictureUrl  (dropped)</text>
+<text x="118.2" y="214.1" fill="#b4472e" font-size="9.5" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">pictureUrl  (dropped)</text>
+<circle cx="156.6" cy="217.4" r="5.7" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<text x="168.3" y="165.9" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="9.5" text-anchor="start" font-weight="500" style="font-variant-numeric: tabular-nums">description</text>
+<text x="168.3" y="165.9" fill="#52514e" font-size="9.5" text-anchor="start" font-weight="500" style="font-variant-numeric: tabular-nums">description</text>
+<circle cx="708.0" cy="258.9" r="4.5" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<text x="697.5" y="262.4" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="9.5" text-anchor="end" font-weight="500" style="font-variant-numeric: tabular-nums">stats.publicActorRunStats30Days</text>
+<text x="697.5" y="262.4" fill="#52514e" font-size="9.5" text-anchor="end" font-weight="500" style="font-variant-numeric: tabular-nums">stats.publicActorRunStats30Days</text>
+<circle cx="86.8" cy="268.4" r="4.4" fill="#b4472e" fill-opacity="0.9" stroke="#fcfcfb" stroke-width="1.1"/>
+<text x="97.2" y="271.9" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="9.5" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">url  (dropped)</text>
+<text x="97.2" y="271.9" fill="#b4472e" font-size="9.5" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">url  (dropped)</text>
+<circle cx="225.1" cy="272.2" r="4.4" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<circle cx="145.5" cy="277.8" r="4.3" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<text x="155.8" y="259.3" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="9.5" text-anchor="start" font-weight="500" style="font-variant-numeric: tabular-nums">title</text>
+<text x="155.8" y="259.3" fill="#52514e" font-size="9.5" text-anchor="start" font-weight="500" style="font-variant-numeric: tabular-nums">title</text>
+<circle cx="101.1" cy="283.0" r="4.3" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<text x="111.3" y="286.5" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="9.5" text-anchor="start" font-weight="500" style="font-variant-numeric: tabular-nums">categories</text>
+<text x="111.3" y="286.5" fill="#52514e" font-size="9.5" text-anchor="start" font-weight="500" style="font-variant-numeric: tabular-nums">categories</text>
+<circle cx="86.0" cy="294.3" r="4.2" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<text x="96.2" y="297.8" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="9.5" text-anchor="start" font-weight="500" style="font-variant-numeric: tabular-nums">name</text>
+<text x="96.2" y="297.8" fill="#52514e" font-size="9.5" text-anchor="start" font-weight="500" style="font-variant-numeric: tabular-nums">name</text>
+<circle cx="708.0" cy="294.6" r="4.2" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<text x="697.8" y="298.1" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="9.5" text-anchor="end" font-weight="500" style="font-variant-numeric: tabular-nums">stats.lastRunStartedAt</text>
+<text x="697.8" y="298.1" fill="#52514e" font-size="9.5" text-anchor="end" font-weight="500" style="font-variant-numeric: tabular-nums">stats.lastRunStartedAt</text>
+<circle cx="206.7" cy="295.1" r="4.2" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<circle cx="206.7" cy="295.1" r="4.2" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<circle cx="86.0" cy="305.6" r="4.1" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<text x="96.1" y="309.1" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="9.5" text-anchor="start" font-weight="500" style="font-variant-numeric: tabular-nums">id</text>
+<text x="96.1" y="309.1" fill="#52514e" font-size="9.5" text-anchor="start" font-weight="500" style="font-variant-numeric: tabular-nums">id</text>
+<circle cx="86.8" cy="314.2" r="4.1" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<text x="96.9" y="240.7" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="9.5" text-anchor="start" font-weight="500" style="font-variant-numeric: tabular-nums">pricing.pricingModel</text>
+<text x="96.9" y="240.7" fill="#52514e" font-size="9.5" text-anchor="start" font-weight="500" style="font-variant-numeric: tabular-nums">pricing.pricingModel</text>
+<circle cx="112.2" cy="319.9" r="4.1" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<circle cx="86.8" cy="323.1" r="4.1" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<text x="96.9" y="326.6" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="9.5" text-anchor="start" font-weight="500" style="font-variant-numeric: tabular-nums">username</text>
+<text x="96.9" y="326.6" fill="#52514e" font-size="9.5" text-anchor="start" font-weight="500" style="font-variant-numeric: tabular-nums">username</text>
+<circle cx="401.8" cy="328.1" r="4.1" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<circle cx="289.1" cy="330.1" r="4.1" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<circle cx="250.6" cy="330.9" r="4.1" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<circle cx="458.0" cy="343.6" r="4.0" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<circle cx="86.0" cy="346.2" r="4.0" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<circle cx="708.0" cy="348.9" r="4.0" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<circle cx="111.0" cy="357.6" r="4.0" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<circle cx="97.1" cy="359.2" r="4.0" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<circle cx="105.0" cy="359.4" r="4.0" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<circle cx="706.4" cy="364.4" r="4.0" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<circle cx="102.7" cy="368.6" r="4.0" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<circle cx="698.5" cy="370.4" r="4.0" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<circle cx="86.8" cy="370.9" r="4.0" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<circle cx="689.8" cy="374.9" r="4.0" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<text x="679.8" y="378.4" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="9.5" text-anchor="end" font-weight="500" style="font-variant-numeric: tabular-nums">stats.totalUsers30Days</text>
+<text x="679.8" y="378.4" fill="#52514e" font-size="9.5" text-anchor="end" font-weight="500" style="font-variant-numeric: tabular-nums">stats.totalUsers30Days</text>
+<circle cx="514.4" cy="379.3" r="4.0" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<circle cx="671.5" cy="380.3" r="4.0" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<circle cx="457.3" cy="388.1" r="4.0" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<circle cx="337.5" cy="389.4" r="4.0" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<circle cx="318.4" cy="398.7" r="4.0" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<circle cx="259.0" cy="399.8" r="4.0" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<circle cx="122.6" cy="432.4" r="4.0" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<circle cx="149.0" cy="443.0" r="4.0" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<circle cx="148.2" cy="452.4" r="4.0" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<circle cx="159.1" cy="479.6" r="4.0" fill="#2f6f5e" fill-opacity="0.5" stroke="#fcfcfb" stroke-width="1.1"/>
+<text x="730.0" y="174.0" font-size="9" fill="#8a8880" text-anchor="start" font-weight="700" letter-spacing="0.8" style="font-variant-numeric: tabular-nums">READ IT AS FOUR CORNERS</text>
+<text x="730.0" y="194.0" font-size="10" fill="#b4472e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">top-left — big and</text>
+<text x="730.0" y="206.5" font-size="10" fill="#b4472e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">static: pure waste, and</text>
+<text x="730.0" y="219.0" font-size="10" fill="#b4472e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">this is where the three</text>
+<text x="730.0" y="231.5" font-size="10" fill="#b4472e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">dropped fields sit</text>
+<text x="730.0" y="254.0" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">top-right — big and</text>
+<text x="730.0" y="266.5" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">live: expensive but</text>
+<text x="730.0" y="279.0" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">real, keep it</text>
+<text x="730.0" y="291.5" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">(pricingPerEvent)</text>
+<text x="730.0" y="314.0" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">bottom-right — cheap</text>
+<text x="730.0" y="326.5" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">and always moving: the</text>
+<text x="730.0" y="339.0" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">usage counters, and why</text>
+<text x="730.0" y="351.5" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">dedupe never fires here</text>
+<text x="730.0" y="374.0" font-size="10" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">bottom-left — cheap and</text>
+<text x="730.0" y="386.5" font-size="10" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">static: identity, free</text>
+<text x="730.0" y="399.0" font-size="10" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">to carry (id, name)</text>
+<line x1="28" y1="538.0" x2="852" y2="538.0" stroke="#e3e2db"/>
+<text x="28.0" y="554.0" font-size="10" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">Apify store API. Before-picture is the ONLY Internet Archive memento of this endpoint (2026-08-18, 949 actors); 784 of them are</text>
+<text x="28.0" y="567.0" font-size="10" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">still present. One gap of 37 days is a weak estimate of a weekly change rate and a single pair cannot see a field that changes and</text>
+<text x="28.0" y="580.0" font-size="10" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">changes back.</text>
+</svg>

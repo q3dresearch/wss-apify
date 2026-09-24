@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="560" viewBox="0 0 880 560" font-family='system-ui, -apple-system, "Segoe UI", sans-serif'><rect width="880" height="560" fill="#fcfcfb"/>
+<text x="28.0" y="40.0" font-size="19" fill="#0b0b0b" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">Half the store has exactly one user a month. The top 1% has 78% of them.</text>
+<text x="28.0" y="60.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">Cumulative share of 30-day users against cumulative share of actors, poorest first. 51,907 actors, one capture.</text>
+<text x="28.0" y="88.0" font-size="8.5" fill="#8a8880" text-anchor="start" font-weight="700" letter-spacing="0.9" style="font-variant-numeric: tabular-nums">FOR</text>
+<text x="28.0" y="103.0" font-size="11.5" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">Anyone about to average this data, size the</text>
+<text x="28.0" y="116.5" font-size="11.5" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">market, or pick a typical actor</text>
+<text x="302.7" y="88.0" font-size="8.5" fill="#8a8880" text-anchor="start" font-weight="700" letter-spacing="0.9" style="font-variant-numeric: tabular-nums">DECIDE</text>
+<text x="302.7" y="103.0" font-size="11.5" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">Whether "an actor" is a unit that means</text>
+<text x="302.7" y="116.5" font-size="11.5" fill="#52514e" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">anything here</text>
+<text x="577.3" y="88.0" font-size="8.5" fill="#8a8880" text-anchor="start" font-weight="700" letter-spacing="0.9" style="font-variant-numeric: tabular-nums">WRONG IF</text>
+<text x="577.3" y="103.0" font-size="11.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">The curve sits near the diagonal, which would</text>
+<text x="577.3" y="116.5" font-size="11.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">make a mean informative</text>
+<line x1="28" y1="126.0" x2="852" y2="126.0" stroke="#e3e2db"/>
+<line x1="88" y1="464.0" x2="560" y2="464.0" stroke="#f0efe9"/>
+<text x="79.0" y="467.5" font-size="10" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">0</text>
+<text x="88.0" y="481.0" font-size="10" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">0</text>
+<line x1="88" y1="389.5" x2="560" y2="389.5" stroke="#f0efe9"/>
+<text x="79.0" y="393.0" font-size="10" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">25</text>
+<text x="206.0" y="481.0" font-size="10" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">25</text>
+<line x1="88" y1="315.0" x2="560" y2="315.0" stroke="#f0efe9"/>
+<text x="79.0" y="318.5" font-size="10" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">50</text>
+<text x="324.0" y="481.0" font-size="10" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">50</text>
+<line x1="88" y1="240.5" x2="560" y2="240.5" stroke="#f0efe9"/>
+<text x="79.0" y="244.0" font-size="10" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">75</text>
+<text x="442.0" y="481.0" font-size="10" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">75</text>
+<line x1="88" y1="166.0" x2="560" y2="166.0" stroke="#f0efe9"/>
+<text x="79.0" y="169.5" font-size="10" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">100</text>
+<text x="560.0" y="481.0" font-size="10" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">100</text>
+<text x="79.0" y="152.0" font-size="10" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">% of users</text>
+<text x="324.0" y="500.0" font-size="10.5" fill="#8a8880" text-anchor="middle" font-weight="normal" style="font-variant-numeric: tabular-nums">% of actors, least-used first</text>
+<line x1="88" y1="464" x2="560" y2="166.0" stroke="#aca89a" stroke-width="1.4" stroke-dasharray="5 4"/>
+<text x="184.0" y="386.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10.5" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">equal shares</text>
+<text x="184.0" y="386.0" fill="#8a8880" font-size="10.5" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">equal shares</text>
+<polyline points="90.4,464.0 92.7,464.0 95.1,464.0 97.4,464.0 99.8,464.0 102.1,464.0 104.5,464.0 106.8,464.0 109.2,464.0 111.6,464.0 113.9,464.0 116.3,464.0 118.6,464.0 121.0,464.0 123.3,464.0 125.7,464.0 128.0,464.0 130.4,464.0 132.7,464.0 135.1,464.0 137.5,464.0 139.8,464.0 142.2,464.0 144.5,464.0 146.9,464.0 149.2,464.0 151.6,464.0 153.9,464.0 156.3,464.0 158.7,464.0 161.0,464.0 163.4,464.0 165.7,464.0 168.1,464.0 170.4,464.0 172.8,464.0 175.1,464.0 177.5,464.0 179.9,464.0 182.2,463.9 184.6,463.8 186.9,463.7 189.3,463.6 191.6,463.5 194.0,463.5 196.3,463.4 198.7,463.3 201.0,463.2 203.4,463.1 205.8,463.0 208.1,462.9 210.5,462.8 212.8,462.7 215.2,462.6 217.5,462.6 219.9,462.5 222.2,462.4 224.6,462.3 227.0,462.2 229.3,462.1 231.7,462.0 234.0,461.9 236.4,461.8 238.7,461.7 241.1,461.7 243.4,461.6 245.8,461.5 248.1,461.4 250.5,461.3 252.9,461.2 255.2,461.1 257.6,461.0 259.9,460.9 262.3,460.8 264.6,460.7 267.0,460.7 269.3,460.6 271.7,460.5 274.1,460.4 276.4,460.3 278.8,460.2 281.1,460.1 283.5,460.0 285.8,459.9 288.2,459.8 290.5,459.8 292.9,459.7 295.3,459.6 297.6,459.5 300.0,459.4 302.3,459.3 304.7,459.2 307.0,459.1 309.4,459.0 311.7,458.9 314.1,458.9 316.4,458.8 318.8,458.7 321.2,458.6 323.5,458.5 325.9,458.4 328.2,458.3 330.6,458.2 332.9,458.1 335.3,458.0 337.6,458.0 340.0,457.9 342.4,457.8 344.7,457.7 347.1,457.6 349.4,457.5 351.8,457.4 354.1,457.3 356.5,457.2 358.8,457.1 361.2,457.0 363.5,457.0 365.9,456.9 368.3,456.8 370.6,456.7 373.0,456.6 375.3,456.5 377.7,456.4 380.0,456.3 382.4,456.2 384.7,456.1 387.1,456.1 389.5,456.0 391.8,455.9 394.2,455.8 396.5,455.7 398.9,455.6 401.2,455.5 403.6,455.4 405.9,455.3 408.3,455.2 410.7,455.2 413.0,455.1 415.4,455.0 417.7,454.8 420.1,454.7 422.4,454.5 424.8,454.3 427.1,454.1 429.5,453.9 431.9,453.7 434.2,453.6 436.6,453.4 438.9,453.2 441.3,453.0 443.6,452.8 446.0,452.7 448.3,452.5 450.7,452.3 453.0,452.1 455.4,451.9 457.8,451.8 460.1,451.6 462.5,451.4 464.8,451.2 467.2,450.9 469.5,450.6 471.9,450.3 474.2,450.1 476.6,449.8 479.0,449.5 481.3,449.3 483.7,448.9 486.0,448.5 488.4,448.2 490.7,447.8 493.1,447.5 495.4,447.0 497.8,446.6 500.2,446.1 502.5,445.6 504.9,445.1 507.2,444.5 509.6,444.0 511.9,443.3 514.3,442.6 516.6,441.9 519.0,441.1 521.3,440.2 523.7,439.3 526.1,438.3 528.4,437.2 530.8,435.9 533.1,434.5 535.5,433.0 537.8,431.2 540.2,429.2 542.5,426.9 544.9,424.1 547.3,420.8 549.6,416.5 552.0,411.0 554.3,403.0 556.7,389.6 559.0,353.4 560.0,166.0" fill="none" stroke="#2f6f5e" stroke-width="2.4"/>
+<line x1="555.3" y1="166.0" x2="555.3" y2="464" stroke="#b4472e" stroke-width="1.6" stroke-dasharray="3 3"/>
+<text x="547.3" y="182.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="11.5" text-anchor="end" font-weight="600" style="font-variant-numeric: tabular-nums">top 1% — 78% of all users</text>
+<text x="547.3" y="182.0" fill="#b4472e" font-size="11.5" text-anchor="end" font-weight="600" style="font-variant-numeric: tabular-nums">top 1% — 78% of all users</text>
+<text x="618.0" y="164.0" font-size="10.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">actors by 30-day users</text>
+<rect x="652" y="180.0" width="62.9" height="35.3" rx="2.5" fill="#b4472e" fill-opacity="0.85"/>
+<text x="646.0" y="200.1" font-size="10.5" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">0</text>
+<text x="720.9" y="200.1" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">10,096</text>
+<text x="720.9" y="200.1" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">10,096</text>
+<rect x="652" y="220.3" width="162.0" height="35.3" rx="2.5" fill="#b4472e" fill-opacity="0.85"/>
+<text x="646.0" y="240.4" font-size="10.5" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">1</text>
+<text x="820.0" y="240.4" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">26,020</text>
+<text x="820.0" y="240.4" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">26,020</text>
+<rect x="652" y="260.6" width="52.6" height="35.3" rx="2.5" fill="#2f6f5e" fill-opacity="0.8"/>
+<text x="646.0" y="280.7" font-size="10.5" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">2-4</text>
+<text x="710.6" y="280.7" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">8,445</text>
+<text x="710.6" y="280.7" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">8,445</text>
+<rect x="652" y="300.9" width="18.4" height="35.3" rx="2.5" fill="#2f6f5e" fill-opacity="0.8"/>
+<text x="646.0" y="321.0" font-size="10.5" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">5-9</text>
+<text x="676.4" y="321.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">2,961</text>
+<text x="676.4" y="321.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">2,961</text>
+<rect x="652" y="341.1" width="19.7" height="35.3" rx="2.5" fill="#2f6f5e" fill-opacity="0.8"/>
+<text x="646.0" y="361.3" font-size="10.5" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">10-49</text>
+<text x="677.7" y="361.3" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">3,163</text>
+<text x="677.7" y="361.3" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">3,163</text>
+<rect x="652" y="381.4" width="5.2" height="35.3" rx="2.5" fill="#2f6f5e" fill-opacity="0.8"/>
+<text x="646.0" y="401.6" font-size="10.5" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">50-199</text>
+<text x="663.2" y="401.6" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">828</text>
+<text x="663.2" y="401.6" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">828</text>
+<rect x="652" y="421.7" width="2.5" height="35.3" rx="2.5" fill="#2f6f5e" fill-opacity="0.8"/>
+<text x="646.0" y="441.9" font-size="10.5" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">200+</text>
+<text x="660.5" y="441.9" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">394</text>
+<text x="660.5" y="441.9" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">394</text>
+<text x="618.0" y="468.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="11.5" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">70% have one user or none</text>
+<text x="618.0" y="468.0" fill="#b4472e" font-size="11.5" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">70% have one user or none</text>
+<line x1="28" y1="498.0" x2="852" y2="498.0" stroke="#e3e2db"/>
+<text x="28.0" y="514.0" font-size="10" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">Apify store API, captured 51,907 distinct actors 2026-09-24. Median actor has 1 user in 30 days; the largest has 44,184. A mean over</text>
+<text x="28.0" y="527.0" font-size="10" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">this distribution describes no actor in it, and the store's own `total` is not a usable denominator — see the coverage plate.</text>
+</svg>
