@@ -30,7 +30,15 @@ licence: "NOT ESTABLISHED (checked 2026-09-24). Crawling is explicitly permitted
 # counterparties publishing under their own handle, not private individuals, but
 # the field is not `none` and must not be declared as such.
 personal_data: parties_only
-storage: git
+
+# RAW BYTES GO TO R2, NOT GIT, AND THE REASON IS THE LICENCE ABOVE.
+# Crawling is explicitly permitted; REDISTRIBUTION IS NOT ESTABLISHED. Committing
+# 34 MB of full store records to a public repo would be redistribution, and would
+# contradict LICENSE-DATA in the same repository. So the bytes live in a private
+# bucket and git carries only what is ours: the manifest (urls, hashes, byte
+# counts -- no publisher content), the code, and a 5.6 KB aggregate per capture
+# that holds no actor identity at all. See `public/` and the README.
+storage: object
 
 # THREE FIELDS DROPPED FROM THE STORED BYTES, MEASURED NOT GUESSED.
 # Halves the capture -- 67.1 MB -> 35.0 MB, 3.49 -> 1.82 GB/yr weekly -- and

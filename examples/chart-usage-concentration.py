@@ -11,7 +11,11 @@ ALERT  = "#b4472e"
 
 def main():
     here = pathlib.Path(__file__).resolve()
-    st = json.load(open(sys.argv[1]))
+    # Argument-free by default so the workflow can call it bare: read the
+    # newest public snapshot, which is the aggregate that is safe to publish.
+    src = (sys.argv[1] if len(sys.argv) > 1 else
+           str(sorted((here.parents[1] / "public").glob("stats-*.json"))[-1]))
+    st = json.load(open(src))
     L = st["lorenz"]; top1 = st["top1pct_share"]
     # ORDER DECLARED HERE, NOT INHERITED. The stats file is written with
     # sort_keys=True, which orders these labels as STRINGS: 0, 1, 10-49, 2-4,

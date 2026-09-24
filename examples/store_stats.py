@@ -23,9 +23,18 @@ def partition(url: str) -> str:
 
 
 def main() -> int:
-    ap = argparse.ArgumentParser(); ap.add_argument("--out", default="")
+    ap = argparse.ArgumentParser()
+    # Default to a DATED PUBLIC SNAPSHOT. This file is the only thing about the
+    # store that git keeps: ~6 KB of bands, Lorenz points, per-partition totals
+    # and field volatility, with no actor identity in it. The records it is
+    # computed from are in R2 and gitignored, because redistribution rights are
+    # not established -- see LICENSE-DATA.
+    import datetime as _dt
+    ap.add_argument("--out", default=str(REPO / "public" /
+                    f"stats-{_dt.date.today().isoformat()}.json"))
     a = ap.parse_args()
 
+    root = REPO
     import csv
     man = []
     for f in (REPO / "manifest").glob("*/*.csv"):
@@ -56,51 +65,25 @@ def main() -> int:
         same = sum(1 for x in actors.values() if x.get(top) == (x.get("stats") or {}).get(top))
         dup[top] = {"same": same, "n": len(actors)}
 
-    # FIELD VOLATILITY MUST BE MEASURED ON UNPROJECTED BYTES, BOTH SIDES.
+    # FIELD VOLATILITY IS A FROZEN ONE-OFF, READ FROM public/, NOT RECOMPUTED.
     #
-    # The first version compared the archive memento against THIS REPO'S captures
-    # -- which are projected, so userPictureUrl/pictureUrl/url are absent from
-    # the new side. They came out as "changed on 100% of actors, 0.01% of the
-    # payload" and landed in the opposite corner of the chart from the truth
-    # (20.1% / 7.3%). Comparing a full record against a deliberately trimmed one
-    # measures the trim, not the publisher.
+    # Two reasons it cannot be recomputed here. Payload share needs fields that
+    # `project_drop` already removes from this repo's captures, so measuring it
+    # from our own data would measure the trim rather than the publisher. And the
+    # only before-picture that exists is a single Internet Archive memento of
+    # this endpoint, which is not ours to re-derive on a schedule.
     #
-    # So the live side is fetched fresh and unprojected here, one page, matching
-    # the memento's own offset=0 slice.
-    old_p = SCRATCH / "apify_memento_20260818.json.gz"
-    vol = {}
-    if old_p.exists():
-        import socket, urllib.request
-        _o = socket.getaddrinfo
-        socket.getaddrinfo = lambda h, p_, f=0, t=0, pr=0, fl=0: _o(h, p_, socket.AF_INET, t, pr, fl)
-        UA = "wss-screening/0.1 (+https://github.com/q3dresearch/wss-apify; archival research)"
-        live = urllib.request.urlopen(urllib.request.Request(
-            "https://api.apify.com/v2/store?limit=1000&offset=0",
-            headers={"User-Agent": UA}), timeout=180).read()
-        fresh = {x["id"]: x for x in json.loads(live)["data"]["items"]}
-        old = {x["id"]: x for x in json.loads(gzip.decompress(old_p.read_bytes()))}
-        actors_v = fresh
-        both = set(old) & set(fresh)
-        def flat(x):
-            o = {}
-            for k, v in x.items():
-                if isinstance(v, dict) and k in ("stats", "currentPricingInfo"):
-                    for k2, v2 in v.items(): o[f"{k}.{k2}"] = json.dumps(v2, separators=(",", ":"))
-                else: o[k] = json.dumps(v, separators=(",", ":"))
-            return o
-        chg, seen, size = collections.Counter(), collections.Counter(), collections.Counter()
-        for i in both:
-            o, nw = flat(old[i]), flat(actors_v[i])
-            for k in set(o) | set(nw):
-                seen[k] += 1; size[k] += len(nw.get(k, ""))
-                if o.get(k) != nw.get(k): chg[k] += 1
-        s = sum(size.values())
-        vol = {k: {"rate": round(100 * chg[k] / max(1, seen[k]), 2),
-                   "share": round(100 * size[k] / max(1, s), 3),
-                   "n": seen[k]} for k in size}
-        vol_overlap = len(both)
-    else:
-        vol_overlap = 0
+    # The earlier version read that memento from a session scratchpad path --
+    # which was cleared, returned zero fields, and would never have existed on a
+    # runner at all. Now it reads an aggregate committed under public/, which
+    # carries shares and change rates per field and no actor identity.
+    vol, vol_overlap = {}, 0
+    frozen = sorted((root / "public").glob("volatility-*.json"))
+    if frozen:
+        d = json.loads(frozen[-1].read_text())
+        vol = {k: {"share": v["share"], "rate": v["rate"], "n": v["n"]}
+               for k, v in d["fields"].items()}
+        vol_overlap = d.get("overlap_actors", 0)
 
     stats = {
         "actors": len(actors),

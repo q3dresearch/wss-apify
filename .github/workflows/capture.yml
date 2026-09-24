@@ -98,7 +98,33 @@ jobs:
           fi
 
       - name: Capture
+        env:
+          # REQUIRED, because this source declares `storage: object`. Without
+          # these the object config resolves empty and the job cannot write a
+          # byte -- wss-drug-scarcity ran red for three days that way, so the
+          # wiring ships rather than being remembered at the point it is needed.
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+          WSS_OBJECT_PREFIX: ${{ secrets.WSS_OBJECT_PREFIX }}
         run: wss capture --cadence "$CADENCE" --shard 1/1
+
+      # THE PUBLISHABLE HALF. Raw records went to R2 above and are never
+      # committed; derive and the aggregate run here so git gets the 5.6 KB
+      # that carries no actor identity, plus the charts drawn from it.
+      - name: Derive, aggregate, redraw
+        env:
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+          WSS_OBJECT_PREFIX: ${{ secrets.WSS_OBJECT_PREFIX }}
+        run: |
+          wss derive
+          wss schema
+          python examples/store_stats.py
+          for c in examples/chart-*.py; do python "$c"; done
 
       - name: Drop quarantine (triage lives in CI artifacts, never in git)
         if: always()
@@ -133,7 +159,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A raw manifest registry state
+          # raw/ and derived/observations are gitignored -- they hold the
+          # publisher's records and redistribution is not established.
+          git add -A manifest registry state public examples/charts SCHEMA.md schema SOURCES.md
           if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
           git commit -m "capture($CADENCE): run ${{ github.run_id }}"
           for i in 1 2 3 4 5; do

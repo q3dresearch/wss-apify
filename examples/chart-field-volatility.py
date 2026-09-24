@@ -16,7 +16,11 @@ LABEL = {"currentPricingInfo.pricingPerEvent", "userPictureUrl", "pictureUrl", "
 
 def main():
     here = pathlib.Path(__file__).resolve()
-    st = json.load(open(sys.argv[1]))
+    # Argument-free by default so the workflow can call it bare: read the
+    # newest public snapshot, which is the aggregate that is safe to publish.
+    src = (sys.argv[1] if len(sys.argv) > 1 else
+           str(sorted((here.parents[1] / "public").glob("stats-*.json"))[-1]))
+    st = json.load(open(src))
     V = st["volatility"]; overlap = st["volatility_overlap"]
     if not V:
         print("  no volatility data"); return 1

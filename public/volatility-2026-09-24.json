@@ -1,0 +1,215 @@
+{
+ "after": "live unprojected refetch",
+ "before": "2026-08-18 Internet Archive memento",
+ "fields": {
+  "actorReviewCount": {
+   "n": 783,
+   "rate": 37.29,
+   "share": 0.06
+  },
+  "actorReviewRating": {
+   "n": 783,
+   "rate": 50.83,
+   "share": 0.448
+  },
+  "badge": {
+   "n": 783,
+   "rate": 3.07,
+   "share": 0.183
+  },
+  "bookmarkCount": {
+   "n": 783,
+   "rate": 59.9,
+   "share": 0.081
+  },
+  "categories": {
+   "n": 783,
+   "rate": 2.43,
+   "share": 1.612
+  },
+  "currentPricingInfo.apifyMarginPercentage": {
+   "n": 772,
+   "rate": 0.13,
+   "share": 0.132
+  },
+  "currentPricingInfo.createdAt": {
+   "n": 772,
+   "rate": 19.43,
+   "share": 1.142
+  },
+  "currentPricingInfo.forceContainsSignificantPriceChange": {
+   "n": 85,
+   "rate": 5.88,
+   "share": 0.023
+  },
+  "currentPricingInfo.isPPEPlatformUsagePaidByUser": {
+   "n": 79,
+   "rate": 10.13,
+   "share": 0.017
+  },
+  "currentPricingInfo.isPriceChangeNotificationSuppressed": {
+   "n": 721,
+   "rate": 4.02,
+   "share": 0.194
+  },
+  "currentPricingInfo.minimalMaxTotalChargeUsd": {
+   "n": 631,
+   "rate": 2.69,
+   "share": 0.141
+  },
+  "currentPricingInfo.notifiedAboutChangeAt": {
+   "n": 204,
+   "rate": 59.8,
+   "share": 0.287
+  },
+  "currentPricingInfo.notifiedAboutFutureChangeAt": {
+   "n": 305,
+   "rate": 26.56,
+   "share": 0.411
+  },
+  "currentPricingInfo.notifiedAboutRentalToPpePriceChangeAt": {
+   "n": 10,
+   "rate": 10.0,
+   "share": 0.013
+  },
+  "currentPricingInfo.pricingModel": {
+   "n": 783,
+   "rate": 0.13,
+   "share": 0.662
+  },
+  "currentPricingInfo.pricingPerEvent": {
+   "n": 771,
+   "rate": 28.66,
+   "share": 34.609
+  },
+  "currentPricingInfo.reasonForChange": {
+   "n": 295,
+   "rate": 22.37,
+   "share": 2.189
+  },
+  "currentPricingInfo.startedAt": {
+   "n": 772,
+   "rate": 19.43,
+   "share": 1.142
+  },
+  "description": {
+   "n": 783,
+   "rate": 11.37,
+   "share": 10.392
+  },
+  "id": {
+   "n": 783,
+   "rate": 0.0,
+   "share": 0.847
+  },
+  "isWhiteListedForAgenticPayments": {
+   "n": 783,
+   "rate": 1.79,
+   "share": 0.184
+  },
+  "name": {
+   "n": 783,
+   "rate": 0.0,
+   "share": 1.167
+  },
+  "notice": {
+   "n": 783,
+   "rate": 0.0,
+   "share": 0.267
+  },
+  "pictureUrl": {
+   "n": 774,
+   "rate": 3.23,
+   "share": 12.613
+  },
+  "stats.actorReviewCount": {
+   "n": 783,
+   "rate": 27.71,
+   "share": 0.058
+  },
+  "stats.actorReviewRating": {
+   "n": 783,
+   "rate": 32.44,
+   "share": 0.422
+  },
+  "stats.bookmarkCount": {
+   "n": 783,
+   "rate": 40.61,
+   "share": 0.078
+  },
+  "stats.lastRunStartedAt": {
+   "n": 783,
+   "rate": 100.0,
+   "share": 1.159
+  },
+  "stats.publicActorRunStats30Days": {
+   "n": 783,
+   "rate": 100.0,
+   "share": 3.19
+  },
+  "stats.totalBuilds": {
+   "n": 783,
+   "rate": 68.84,
+   "share": 0.105
+  },
+  "stats.totalMetamorphs": {
+   "n": 34,
+   "rate": 11.76,
+   "share": 0.006
+  },
+  "stats.totalRuns": {
+   "n": 783,
+   "rate": 100.0,
+   "share": 0.247
+  },
+  "stats.totalUsers": {
+   "n": 783,
+   "rate": 99.74,
+   "share": 0.159
+  },
+  "stats.totalUsers30Days": {
+   "n": 783,
+   "rate": 96.93,
+   "share": 0.118
+  },
+  "stats.totalUsers7Days": {
+   "n": 783,
+   "rate": 94.13,
+   "share": 0.101
+  },
+  "stats.totalUsers90Days": {
+   "n": 783,
+   "rate": 98.47,
+   "share": 0.134
+  },
+  "title": {
+   "n": 783,
+   "rate": 9.58,
+   "share": 1.864
+  },
+  "url": {
+   "n": 783,
+   "rate": 0.13,
+   "share": 2.44
+  },
+  "userFullName": {
+   "n": 783,
+   "rate": 4.21,
+   "share": 0.564
+  },
+  "userPictureUrl": {
+   "n": 777,
+   "rate": 7.34,
+   "share": 20.021
+  },
+  "username": {
+   "n": 783,
+   "rate": 0.13,
+   "share": 0.515
+  }
+ },
+ "gap_days": 37,
+ "measured_on": "2026-09-24",
+ "note": "A ONE-OFF. Payload share cannot be recomputed from this repo's own captures because project_drop already removes pictureUrl, userPictureUrl and url. Both sides here are unprojected; comparing a full record to a trimmed one measures the trim, not the publisher.",
+ "overlap_actors": 783
+}

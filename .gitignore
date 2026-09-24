@@ -11,3 +11,12 @@ quarantine/
 __pycache__/
 *.pyc
 .venv/
+
+# THE PUBLISHABLE/PRIVATE SEAM. Redistribution rights for Apify's store records
+# are NOT established (see LICENSE-DATA), so no file containing their records is
+# tracked. raw/ holds full records; derived/observations holds per-actor rows with
+# username, name and usage. Both stay out of git. What IS tracked is public/,
+# which is aggregate-only: bands, Lorenz points, per-partition totals and
+# field-level volatility, with no actor identity in it -- 5.6 KB against 51 MB.
+raw/
+derived/observations/
