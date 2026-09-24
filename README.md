@@ -71,8 +71,8 @@ next thing to build.
 | --- | --- | --- |
 | Q1 | Which scrapers have real users, as opposed to merely existing? | **answered** — see the chart above |
 | Q2 | What share of the store is dead? | **answered as a floor** — 19.4% have zero 30-day users, and the reachable slice is popularity-ordered, so the true rate is higher |
-| Q3 | When an actor disappears, was its usage already falling — or did it vanish healthy? | needs 2+ captures. This is the whole reason for capturing |
-| Q4 | Do actors that arrive together survive together? | needs ~1 year — the store carries no `createdAt`, so age accrues only from our own first-seen |
+| Q3 | When an actor disappears, was its usage already falling — or did it vanish healthy? | **first evidence, and it vanished healthy.** 15 of the 949 actors in the 2026-08-18 archive memento are absent from a 51,603-actor sweep 37 days later — 1.6%, ~15%/yr. **None had zero users**; median 32/month, max 472. The five largest were all email-harvesting or lead-scraping actors, which reads as enforcement rather than failure. Needs many more captures to separate removal from rank-drop below the truncation wall |
+| Q4 | Do actors that arrive together survive together? | needs ~1 year. A survival curve needs the SAME units observed repeatedly — one capture gives a population snapshot, not survival, and cohort curves by owner, category or arrival week need many. The store carries no `createdAt` in the listing, so age accrues only from our own first-seen |
 | Q5 | Do price changes precede usage changes? | accruing — `pricingPerEvent` is 34.6% of the payload and was kept **for this question alone** |
 | Q6 | Is the store growing, or churning at a constant size? | needs 4+ captures, counted on distinct ids — `total` is not a denominator |
 | Q7 | Does a crowded category predict failure — does a land rush end in a shakeout? | open |
