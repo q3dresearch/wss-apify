@@ -46,13 +46,30 @@ roughly one independent observation per month however often it is sampled, and
 `totalUsers90Days` is worse. Weekly sharpens **arrival and departure**. It does
 not sharpen usage.
 
-**Storage, measured rather than projected.** One capture is **67 MB of raw** (160 pages,
-~0.42 MB gzipped each), so weekly is **~3.5 GB a year** and daily would be ~24 GB. An
-earlier estimate of 0.14 GB/yr was wrong: it was computed on a *projected* field set,
-and wss stores the raw response. There is no way to fetch less — `fields`, `select`,
-`desc=false`, `minimal` and `view=compact` are all silently ignored and return
-byte-identical output — and the 2.16x partition overlap is inherent, because actors
-genuinely carry several categories. This likely wants `storage: object` (R2).
+**Storage, and the 48% that was free.** A capture was **67.1 MB** until three fields
+came out of the stored bytes:
+
+| dropped field | share of payload | why it costs nothing |
+| --- | ---: | --- |
+| `userPictureUrl` | 20.1% | CDN link to the developer's avatar |
+| `pictureUrl` | 12.7% | CDN link to the actor's icon |
+| `url` | 2.4% | exactly `lowercase("https://apify.com/" + username + "/" + name)` on **123,639 of 123,639** records checked |
+
+That is `project_drop` in the registry (engine v0.6.57, opt-in, off everywhere else).
+`content_sha256` still records the hash of the **untouched** response and every projected
+row carries `projected:...` in `warnings`, so the edit is visible and reversible by
+refetching. Result: **35.0 MB per capture — 1.82 GB/yr weekly, 12.8 GB/yr daily.**
+
+**What was deliberately NOT dropped.** `currentPricingInfo.pricingPerEvent` is the single
+largest field at 34.5% and changed on 29.1% of actors over a 37-day window — expensive
+*and* live. Dropping it would keep "a price changed, when and why" while losing the price
+*levels*, which is a real loss rather than a free one. `description` (10.4%) is how an
+actor says what it does. Both stay.
+
+**There is no way to fetch less** — `fields`, `select`, `projection`, `desc=false`,
+`includePricing=false`, `minimal=true` and `view=compact` are each silently ignored and
+return byte-identical output. And the 2.16x partition overlap is inherent, because actors
+genuinely carry several categories.
 
 The one droppable block is the `ALL` partition: 16 of 160 pages, uniquely contributing
 **431 actors of 51,449 (0.8%)**. It is kept, because those are the *uncategorised*

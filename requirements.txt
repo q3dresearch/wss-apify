@@ -2,8 +2,8 @@
 # (resolving the owner as ${{ github.repository_owner }}). For local
 # development against a sibling checkout: pip install -e ../wss
 #
-# v0.6.55 deliberately, NOT the newer 0.6.56. This repo is weekly and needs
-# nothing that 0.6.56 added (an "hourly" cadence for wss-flood-warnings), and
-# 0.6.55 is already tagged and public. Pinning forward would block this repo
-# on a tag that has not been pushed yet, for a feature it does not use.
-wss[object] @ git+https://github.com/q3dresearch/wss-engine.git@v0.6.55
+# v0.6.57 is the FLOOR: it is the first version with `project_drop`, which this
+# repo declares to halve its capture size. Any earlier engine rejects the
+# registry at `wss validate` with "unknown key 'project_drop'".
+# NOTE: 0.6.57 is not pushed yet -- it must be tagged before CI can install it.
+wss[object] @ git+https://github.com/q3dresearch/wss-engine.git@v0.6.57

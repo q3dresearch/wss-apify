@@ -34,7 +34,7 @@ env:
   # MUST match the registry's `cadence:`. A mismatch makes `wss plan` return []
   # and the capture silently does nothing while the workflow stays green.
   CADENCE: weekly
-  ENGINE_SPEC: "wss[object] @ git+https://github.com/${{ github.repository_owner }}/wss-engine.git@v0.6.55"
+  ENGINE_SPEC: "wss[object] @ git+https://github.com/${{ github.repository_owner }}/wss-engine.git@v0.6.57"
 
 jobs:
   capture:
