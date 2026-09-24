@@ -76,11 +76,34 @@ The one droppable block is the `ALL` partition: 16 of 160 pages, uniquely contri
 actors and nothing else would ever see them — 10% of cost for a permanent blind spot is
 the wrong trade in a repo whose whole premise is that capture is irreversible.
 
-**The cron is temporarily DAILY**, to prove the schedule fires — GitHub's scheduler
-often skips or delays the first runs on a new repo, and a weekly job takes a month to
-report that it is broken. The registry still declares `cadence: weekly` and the
-workflow's `CADENCE` still says weekly, so `wss plan` keeps matching; only the wake-up
-frequency changed. Revert the cron to `35 3 * * 1` once proven.
+## The daily trial window
+
+**Weekly is the intent. Daily is the trial.** The registry declares `cadence: weekly`
+and the workflow's `CADENCE` says weekly — those two must agree or `wss plan` returns
+`[]` and the job goes green having captured nothing. What is temporarily daily is only
+the **cron**: how often the runner wakes up.
+
+It is daily **until 2026-10-24** because GitHub's scheduler fails in three ways that all
+look like success from inside a single run:
+
+- it **delays** a job, minutes to hours, worst on the hour — which is why this cron is at `:35`
+- it **drops** a firing entirely under load, leaving no trace anywhere
+- it **disables** scheduled workflows outright after 60 days of repository inactivity
+
+A weekly job takes a month to reveal any of that. Daily gives an answer in days, at a
+cost of about **1.05 GB for the trial month**.
+
+**The workflow enforces its own deadline.** Past `REVERT_AFTER` every run emits a warning
+annotation in the Actions UI until the cron is changed back to `35 3 * * 1`. It warns
+rather than fails, because a missed capture here is irreversible and a noisy one is not.
+A temporary cron becomes a permanent one the moment it stops being mentioned.
+
+**Reading the result:** `python3 examples/cron_report.py` replays every committed version
+of `state/last_run.json` out of git history — the file is overwritten each run, so the
+history *is* the record. It reports delivery rate, gap distribution, and any gap over 36
+hours, which on a daily cron means a night was skipped and **no capture exists for it**.
+The heartbeat records `event` too, so a manual `workflow_dispatch` cannot be mistaken for
+the cron working.
 
 ## Three fields that look like measurements and are not
 
@@ -144,3 +167,4 @@ declaration.
 | `parsers/apifyactor_v1.py` | schema `apifyactor.v1` → observations, keyed on actor `id` |
 | `raw/`, `manifest/` | captured bytes and the append-only capture log |
 | `examples/queries.sql` | arrivals, departures, the dead-bet rate with age, coverage |
+| `examples/cron_report.py` | did the cron fire, on time, every time — replayed from git history |

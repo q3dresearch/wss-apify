@@ -22,6 +22,10 @@ on:
     - cron: "35 3 * * *" # daily, off the hour -- GitHub's scheduler is contended at :00
   workflow_dispatch:
 
+# TRIAL WINDOW: daily until 2026-10-24, then revert the cron above to
+# "35 3 * * 1" (Monday). The job warns on every run past that date rather than
+# failing, because a missed capture is irreversible and a noisy one is not.
+
 permissions:
   contents: write
 
@@ -34,6 +38,8 @@ env:
   # MUST match the registry's `cadence:`. A mismatch makes `wss plan` return []
   # and the capture silently does nothing while the workflow stays green.
   CADENCE: weekly
+  # The trial cron above is daily; this is the date it stops being justified.
+  REVERT_AFTER: "2026-10-24"
   ENGINE_SPEC: "wss[object] @ git+https://github.com/${{ github.repository_owner }}/wss-engine.git@v0.6.57"
 
 jobs:
@@ -76,6 +82,21 @@ jobs:
 
       # "1/1" -- the shard spec is ONE-BASED and needs both halves. `--shard 0`
       # is rejected as malformed and `0/1` as out of range.
+      # A temporary cron becomes a permanent one the moment it stops being
+      # mentioned. This makes the deadline part of the run instead of part of
+      # someone's memory: after the trial window every run carries a warning
+      # annotation in the Actions UI until the cron is reverted.
+      - name: Trial window check
+        run: |
+          if [ "$(date -u +%Y-%m-%d)" \> "$REVERT_AFTER" ]; then
+            echo "::warning title=Daily cron has outlived its trial::The daily schedule was" \
+                 "for shaking out the pipeline until $REVERT_AFTER. Revert the cron in" \
+                 ".github/workflows/capture.yml to '35 3 * * 1' (weekly) -- daily is" \
+                 "12.8 GB/yr against weekly's 1.82 GB/yr, and the registry has always said weekly."
+          else
+            echo "daily trial active until $REVERT_AFTER"
+          fi
+
       - name: Capture
         run: wss capture --cadence "$CADENCE" --shard 1/1
 
@@ -92,12 +113,21 @@ jobs:
           if-no-files-found: ignore
           retention-days: 90
 
+      # The heartbeat carries WHAT TRIGGERED THE RUN and WHEN GITHUB QUEUED IT,
+      # not just that it finished. Cron reliability is the point of the trial
+      # window, and it is invisible without these: a skipped night leaves no
+      # trace at all, and a two-hour delay looks identical to an on-time run
+      # once you only have completed_at. `event` separates a real scheduled
+      # firing from a manual workflow_dispatch, which would otherwise inflate
+      # the apparent reliability of the cron.
       - name: Heartbeat
         run: |
           mkdir -p state
-          printf '{"cadence":"%s","sources_planned":%s,"completed_at":"%s","run_id":"%s","workflow":"%s"}\n' \
+          printf '{"cadence":"%s","sources_planned":%s,"completed_at":"%s","queued_at":"%s","event":"%s","cron":"%s","run_id":"%s","attempt":"%s","workflow":"%s"}\n' \
             "$CADENCE" "${{ steps.plan.outputs.count }}" "$(date -u +%FT%TZ)" \
-            "${{ github.run_id }}" "${{ github.workflow }}" > state/last_run.json
+            "${{ github.event.repository.updated_at }}" "${{ github.event_name }}" \
+            "${{ github.event.schedule }}" "${{ github.run_id }}" \
+            "${{ github.run_attempt }}" "${{ github.workflow }}" > state/last_run.json
 
       - name: Commit with rebase-retry
         run: |
