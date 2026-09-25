@@ -1,9 +1,1 @@
-{
-  "cadence": "weekly",
-  "completed_at": "2026-09-24T08:53:52Z",
-  "outcomes": {
-    "first_capture": 160
-  },
-  "shard": "1/1",
-  "sources": 1
-}
+{"cadence":"weekly","sources_planned":1,"completed_at":"2026-09-25T09:18:44Z","queued_at":"2026-09-24T11:29:03Z","event":"schedule","cron":"35 3 * * *","run_id":"36116334800","attempt":"1","workflow":"capture"}

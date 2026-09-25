@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-24T08:59:50Z",
+  "generated_at": "2026-09-25T09:17:00Z",
   "note": "Inferred from the derived rows by `wss schema`, not hand-written. Regenerate after any derive.",
   "sources": {
     "apify.store.actors": {
@@ -15,7 +15,7 @@
     }
   },
   "observations": {
-    "rows": 2111175,
+    "rows": 4214722,
     "columns": [
       "series_id",
       "entity_id",
@@ -33,8 +33,8 @@
     ],
     "series": {
       "apify.store.actors": {
-        "rows": 2111175,
-        "entities": 51603,
+        "rows": 4214722,
+        "entities": 53141,
         "entity_id_samples": [
           "001Q50LgYYIXgA6o1",
           "003lUvaaNz3fFBefF",
@@ -68,7 +68,7 @@
   },
   "metrics": {
     "badge": {
-      "rows": 75,
+      "rows": 152,
       "unit": "",
       "type": "text",
       "series": [
@@ -82,17 +82,17 @@
       ]
     },
     "bookmark_count": {
-      "rows": 124200,
+      "rows": 247968,
       "unit": "bookmarks",
       "type": "number",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 51603,
-      "distinct_values": 216,
+      "entities": 53141,
+      "distinct_values": 229,
       "empty": 0,
       "min": "0",
-      "max": "5122",
+      "max": "5127",
       "samples": [
         "0",
         "1",
@@ -100,14 +100,14 @@
       ]
     },
     "builds_total": {
-      "rows": 124200,
+      "rows": 247968,
       "unit": "builds",
       "type": "number",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 51603,
-      "distinct_values": 501,
+      "entities": 53141,
+      "distinct_values": 650,
       "empty": 0,
       "min": "1",
       "max": "4588",
@@ -118,14 +118,14 @@
       ]
     },
     "categories": {
-      "rows": 124024,
+      "rows": 247345,
       "unit": "",
       "type": "text",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 51432,
-      "distinct_values": 984,
+      "entities": 52592,
+      "distinct_values": 989,
       "empty": 0,
       "samples": [
         "AGENTS",
@@ -134,17 +134,17 @@
       ]
     },
     "last_run_started_at": {
-      "rows": 124076,
+      "rows": 247705,
       "unit": "",
       "type": "date",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 51528,
-      "distinct_values": 51497,
+      "entities": 53058,
+      "distinct_values": 96762,
       "empty": 0,
       "min": "2025-05-06T14:05:39.908Z",
-      "max": "2026-09-24T08:48:36.770Z",
+      "max": "2026-09-25T09:01:41.296Z",
       "samples": [
         "2025-05-06T14:05:39.908Z",
         "2025-07-01T17:17:27.479Z",
@@ -152,13 +152,13 @@
       ]
     },
     "listed": {
-      "rows": 124200,
+      "rows": 247968,
       "unit": "count",
       "type": "bool",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 51603,
+      "entities": 53141,
       "distinct_values": 1,
       "empty": 0,
       "samples": [
@@ -166,14 +166,14 @@
       ]
     },
     "name": {
-      "rows": 124200,
+      "rows": 247968,
       "unit": "",
       "type": "text",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 51603,
-      "distinct_values": 36619,
+      "entities": 53141,
+      "distinct_values": 37625,
       "empty": 0,
       "samples": [
         "104-company-reviews-urls-opp-scraper",
@@ -182,13 +182,13 @@
       ]
     },
     "pricing_model": {
-      "rows": 124200,
+      "rows": 247968,
       "unit": "",
       "type": "text",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 51603,
+      "entities": 53141,
       "distinct_values": 2,
       "empty": 0,
       "samples": [
@@ -197,13 +197,13 @@
       ]
     },
     "review_count": {
-      "rows": 124200,
+      "rows": 247968,
       "unit": "reviews",
       "type": "number",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 51603,
+      "entities": 53141,
       "distinct_values": 93,
       "empty": 0,
       "min": "0",
@@ -215,14 +215,14 @@
       ]
     },
     "review_rating": {
-      "rows": 124200,
+      "rows": 247968,
       "unit": "stars",
       "type": "number",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 51603,
-      "distinct_values": 803,
+      "entities": 53141,
+      "distinct_values": 810,
       "empty": 0,
       "min": "0.0",
       "max": "5.0",
@@ -233,17 +233,17 @@
       ]
     },
     "runs_total": {
-      "rows": 124200,
+      "rows": 247968,
       "unit": "runs",
       "type": "number",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 51603,
-      "distinct_values": 5342,
+      "entities": 53141,
+      "distinct_values": 8385,
       "empty": 0,
       "min": "0",
-      "max": "199532624",
+      "max": "199697128",
       "samples": [
         "0",
         "1",
@@ -251,13 +251,13 @@
       ]
     },
     "source_partition": {
-      "rows": 124200,
+      "rows": 247968,
       "unit": "",
       "type": "text",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 51603,
+      "entities": 53141,
       "distinct_values": 24,
       "empty": 0,
       "samples": [
@@ -267,14 +267,14 @@
       ]
     },
     "title": {
-      "rows": 124200,
+      "rows": 247968,
       "unit": "",
       "type": "text",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 51603,
-      "distinct_values": 46150,
+      "entities": 53141,
+      "distinct_values": 47705,
       "empty": 0,
       "samples": [
         "$0.375/1000 Twitter / X API Flat & Simple",
@@ -283,14 +283,14 @@
       ]
     },
     "username": {
-      "rows": 124200,
+      "rows": 247968,
       "unit": "",
       "type": "text",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 51603,
-      "distinct_values": 2674,
+      "entities": 53141,
+      "distinct_values": 2762,
       "empty": 0,
       "samples": [
         "01010101",
@@ -299,17 +299,17 @@
       ]
     },
     "users_30d": {
-      "rows": 124200,
+      "rows": 247968,
       "unit": "users",
       "type": "number",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 51603,
-      "distinct_values": 500,
+      "entities": 53141,
+      "distinct_values": 713,
       "empty": 0,
       "min": "0",
-      "max": "44354",
+      "max": "44380",
       "samples": [
         "0",
         "1",
@@ -317,17 +317,17 @@
       ]
     },
     "users_7d": {
-      "rows": 124200,
+      "rows": 247968,
       "unit": "users",
       "type": "number",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 51603,
-      "distinct_values": 335,
+      "entities": 53141,
+      "distinct_values": 492,
       "empty": 0,
       "min": "0",
-      "max": "23419",
+      "max": "23445",
       "samples": [
         "0",
         "1",
@@ -335,17 +335,17 @@
       ]
     },
     "users_90d": {
-      "rows": 124200,
+      "rows": 247968,
       "unit": "users",
       "type": "number",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 51603,
-      "distinct_values": 699,
+      "entities": 53141,
+      "distinct_values": 976,
       "empty": 0,
       "min": "0",
-      "max": "78710",
+      "max": "78946",
       "samples": [
         "0",
         "1",
@@ -353,17 +353,17 @@
       ]
     },
     "users_total": {
-      "rows": 124200,
+      "rows": 247968,
       "unit": "users",
       "type": "number",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 51603,
-      "distinct_values": 1336,
+      "entities": 53141,
+      "distinct_values": 1878,
       "empty": 0,
       "min": "0",
-      "max": "615788",
+      "max": "617372",
       "samples": [
         "0",
         "1",
@@ -374,8 +374,8 @@
   "raw": {
     "files": 0,
     "bytes_on_disk": 0,
-    "capture_dates": 1,
+    "capture_dates": 2,
     "first_capture": "2026-09-24T08:44:13Z",
-    "last_capture": "2026-09-24T08:53:50Z"
+    "last_capture": "2026-09-25T09:11:08Z"
   }
 }
