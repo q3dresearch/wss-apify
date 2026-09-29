@@ -40,7 +40,7 @@ env:
   CADENCE: weekly
   # The trial cron above is daily; this is the date it stops being justified.
   REVERT_AFTER: "2026-10-24"
-  ENGINE_SPEC: "wss[object] @ git+https://github.com/${{ github.repository_owner }}/wss-engine.git@v0.6.57"
+  ENGINE_SPEC: "wss[object] @ git+https://github.com/${{ github.repository_owner }}/wss-engine.git@v0.6.58"
 
 jobs:
   capture:

@@ -6,4 +6,4 @@
 # repo declares to halve its capture size. Any earlier engine rejects the
 # registry at `wss validate` with "unknown key 'project_drop'".
 # NOTE: 0.6.57 is not pushed yet -- it must be tagged before CI can install it.
-wss[object] @ git+https://github.com/q3dresearch/wss-engine.git@v0.6.57
+wss[object] @ git+https://github.com/q3dresearch/wss-engine.git@v0.6.58
