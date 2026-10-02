@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01T10:47:07Z",
+  "generated_at": "2026-10-02T10:25:20Z",
   "note": "Inferred from the derived rows by `wss schema`, not hand-written. Regenerate after any derive.",
   "sources": {
     "apify.store.actors": {
@@ -15,7 +15,7 @@
     }
   },
   "observations": {
-    "rows": 16967384,
+    "rows": 19121590,
     "columns": [
       "series_id",
       "entity_id",
@@ -34,8 +34,8 @@
     ],
     "series": {
       "apify.store.actors": {
-        "rows": 16967384,
-        "entities": 58492,
+        "rows": 19121590,
+        "entities": 59252,
         "entity_id_samples": [
           "001Q50LgYYIXgA6o1",
           "003lUvaaNz3fFBefF",
@@ -69,13 +69,13 @@
   },
   "metrics": {
     "badge": {
-      "rows": 592,
+      "rows": 674,
       "unit": "",
       "type": "text",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 25,
+      "entities": 27,
       "distinct_values": 1,
       "empty": 0,
       "samples": [
@@ -83,17 +83,17 @@
       ]
     },
     "bookmark_count": {
-      "rows": 998296,
+      "rows": 1125033,
       "unit": "bookmarks",
       "type": "number",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 58492,
-      "distinct_values": 326,
+      "entities": 59252,
+      "distinct_values": 330,
       "empty": 0,
       "min": "0",
-      "max": "5147",
+      "max": "5152",
       "samples": [
         "0",
         "1",
@@ -101,17 +101,17 @@
       ]
     },
     "builds_total": {
-      "rows": 998296,
+      "rows": 1125033,
       "unit": "builds",
       "type": "number",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 58492,
-      "distinct_values": 1238,
+      "entities": 59252,
+      "distinct_values": 1308,
       "empty": 0,
       "min": "1",
-      "max": "4602",
+      "max": "4610",
       "samples": [
         "1",
         "10",
@@ -119,14 +119,14 @@
       ]
     },
     "categories": {
-      "rows": 995097,
+      "rows": 1121546,
       "unit": "",
       "type": "text",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 56683,
-      "distinct_values": 1038,
+      "entities": 57300,
+      "distinct_values": 1042,
       "empty": 0,
       "samples": [
         "AGENTS",
@@ -135,17 +135,17 @@
       ]
     },
     "last_run_started_at": {
-      "rows": 997255,
+      "rows": 1123875,
       "unit": "",
       "type": "date",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 58394,
-      "distinct_values": 378920,
+      "entities": 59151,
+      "distinct_values": 386961,
       "empty": 0,
       "min": "2025-05-06T14:05:39.908Z",
-      "max": "2026-10-01T10:29:08.642Z",
+      "max": "2026-10-02T10:05:39.198Z",
       "samples": [
         "2025-05-06T14:05:39.908Z",
         "2025-07-01T17:17:27.479Z",
@@ -153,13 +153,13 @@
       ]
     },
     "listed": {
-      "rows": 998296,
+      "rows": 1125033,
       "unit": "count",
       "type": "bool",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 58492,
+      "entities": 59252,
       "distinct_values": 1,
       "empty": 0,
       "samples": [
@@ -167,14 +167,14 @@
       ]
     },
     "name": {
-      "rows": 998296,
+      "rows": 1125033,
       "unit": "",
       "type": "text",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 58492,
-      "distinct_values": 40704,
+      "entities": 59252,
+      "distinct_values": 41069,
       "empty": 0,
       "samples": [
         "100000jobs-ch-scraper",
@@ -183,13 +183,13 @@
       ]
     },
     "pricing_model": {
-      "rows": 998296,
+      "rows": 1125033,
       "unit": "",
       "type": "text",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 58492,
+      "entities": 59252,
       "distinct_values": 2,
       "empty": 0,
       "samples": [
@@ -198,14 +198,14 @@
       ]
     },
     "review_count": {
-      "rows": 998296,
+      "rows": 1125033,
       "unit": "reviews",
       "type": "number",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 58492,
-      "distinct_values": 108,
+      "entities": 59252,
+      "distinct_values": 110,
       "empty": 0,
       "min": "0",
       "max": "1817",
@@ -216,14 +216,14 @@
       ]
     },
     "review_rating": {
-      "rows": 998296,
+      "rows": 1125033,
       "unit": "stars",
       "type": "number",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 58492,
-      "distinct_values": 908,
+      "entities": 59252,
+      "distinct_values": 917,
       "empty": 0,
       "min": "0.0",
       "max": "5.0",
@@ -234,17 +234,17 @@
       ]
     },
     "runs_total": {
-      "rows": 998296,
+      "rows": 1125033,
       "unit": "runs",
       "type": "number",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 58492,
-      "distinct_values": 22130,
+      "entities": 59252,
+      "distinct_values": 23179,
       "empty": 0,
       "min": "0",
-      "max": "203728861",
+      "max": "204326893",
       "samples": [
         "0",
         "1",
@@ -252,13 +252,13 @@
       ]
     },
     "source_partition": {
-      "rows": 998296,
+      "rows": 1125033,
       "unit": "",
       "type": "text",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 58492,
+      "entities": 59252,
       "distinct_values": 24,
       "empty": 0,
       "samples": [
@@ -268,14 +268,14 @@
       ]
     },
     "title": {
-      "rows": 998296,
+      "rows": 1125033,
       "unit": "",
       "type": "text",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 58492,
-      "distinct_values": 54617,
+      "entities": 59252,
+      "distinct_values": 55478,
       "empty": 0,
       "samples": [
         "$0.375/1000 Twitter / X API Flat & Simple",
@@ -284,14 +284,14 @@
       ]
     },
     "username": {
-      "rows": 998296,
+      "rows": 1125033,
       "unit": "",
       "type": "text",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 58492,
-      "distinct_values": 3076,
+      "entities": 59252,
+      "distinct_values": 3128,
       "empty": 0,
       "samples": [
         "01010101",
@@ -300,17 +300,17 @@
       ]
     },
     "users_30d": {
-      "rows": 998296,
+      "rows": 1125033,
       "unit": "users",
       "type": "number",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 58492,
-      "distinct_values": 1571,
+      "entities": 59252,
+      "distinct_values": 1647,
       "empty": 0,
       "min": "0",
-      "max": "46405",
+      "max": "46808",
       "samples": [
         "0",
         "1",
@@ -318,17 +318,17 @@
       ]
     },
     "users_7d": {
-      "rows": 998296,
+      "rows": 1125033,
       "unit": "users",
       "type": "number",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 58492,
-      "distinct_values": 1113,
+      "entities": 59252,
+      "distinct_values": 1172,
       "empty": 0,
       "min": "0",
-      "max": "25327",
+      "max": "25845",
       "samples": [
         "0",
         "1",
@@ -336,17 +336,17 @@
       ]
     },
     "users_90d": {
-      "rows": 998296,
+      "rows": 1125033,
       "unit": "users",
       "type": "number",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 58492,
-      "distinct_values": 2149,
+      "entities": 59252,
+      "distinct_values": 2228,
       "empty": 0,
       "min": "0",
-      "max": "80449",
+      "max": "80743",
       "samples": [
         "0",
         "1",
@@ -354,17 +354,17 @@
       ]
     },
     "users_total": {
-      "rows": 998296,
+      "rows": 1125033,
       "unit": "users",
       "type": "number",
       "series": [
         "apify.store.actors"
       ],
-      "entities": 58492,
-      "distinct_values": 4254,
+      "entities": 59252,
+      "distinct_values": 4380,
       "empty": 0,
       "min": "0",
-      "max": "628509",
+      "max": "630257",
       "samples": [
         "0",
         "1",
@@ -375,8 +375,8 @@
   "raw": {
     "files": 0,
     "bytes_on_disk": 0,
-    "capture_dates": 8,
+    "capture_dates": 9,
     "first_capture": "2026-09-24T08:44:13Z",
-    "last_capture": "2026-10-01T10:32:32Z"
+    "last_capture": "2026-10-02T10:08:23Z"
   }
 }
