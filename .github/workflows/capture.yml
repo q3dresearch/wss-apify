@@ -5,26 +5,22 @@ name: capture
 
 on:
   schedule:
-    # TEMPORARILY DAILY, TO PROVE THE SCHEDULE ACTUALLY FIRES. GitHub's cron is
-    # best-effort and its first runs on a new repo are often delayed or skipped
-    # entirely, so a weekly job takes a month to tell you it is broken. Daily
-    # gives seven answers a week. REVERT TO "35 3 * * 1" (Monday) once proven.
+    # WEEKLY, MONDAY. This was daily from 2026-09-24 to 2026-10-06 to prove the
+    # schedule fires, and it did: thirteen consecutive daily firings, each
+    # starting five to seven hours after the 03:35 UTC slot (GitHub's scheduler
+    # is best-effort and contended), none skipped. That answered the question
+    # the trial existed to ask.
     #
-    # This is a CRON frequency, not a cadence change. The registry still says
-    # `cadence: weekly` and CADENCE below still says weekly, so `wss plan` keeps
-    # matching the source -- the two must agree or plan returns [] and the job
-    # goes green having captured nothing. What changes is only how often the
-    # runner wakes up.
+    # It was then reverted because it was costing more than it taught. Daily is
+    # ~24 GB/year of raw against weekly's ~3.5, and it grew the derived output by
+    # ~720k observations a day -- which is what took the job past what a hosted
+    # runner survives (see the Capture/commit note below).
     #
-    # THE PRICE, SO IT IS NOT DISCOVERED LATER: one capture is 67 MB of raw.
-    # Daily is ~24 GB/year against weekly's ~3.5 GB. Fine for a few days of
-    # proving the cron; not something to leave running.
-    - cron: "35 3 * * *" # daily, off the hour -- GitHub's scheduler is contended at :00
+    # The cron is a FREQUENCY, not a cadence. The registry and CADENCE below say
+    # `weekly`; the two must agree or `wss plan` returns [] and the job goes
+    # green having captured nothing.
+    - cron: "35 3 * * 1" # Monday, off the hour -- GitHub's scheduler is contended at :00
   workflow_dispatch:
-
-# TRIAL WINDOW: daily until 2026-10-24, then revert the cron above to
-# "35 3 * * 1" (Monday). The job warns on every run past that date rather than
-# failing, because a missed capture is irreversible and a noisy one is not.
 
 permissions:
   contents: write
@@ -38,8 +34,6 @@ env:
   # MUST match the registry's `cadence:`. A mismatch makes `wss plan` return []
   # and the capture silently does nothing while the workflow stays green.
   CADENCE: weekly
-  # The trial cron above is daily; this is the date it stops being justified.
-  REVERT_AFTER: "2026-10-24"
   ENGINE_SPEC: "wss[object] @ git+https://github.com/${{ github.repository_owner }}/wss-engine.git@v0.6.58"
 
 jobs:
@@ -82,21 +76,6 @@ jobs:
 
       # "1/1" -- the shard spec is ONE-BASED and needs both halves. `--shard 0`
       # is rejected as malformed and `0/1` as out of range.
-      # A temporary cron becomes a permanent one the moment it stops being
-      # mentioned. This makes the deadline part of the run instead of part of
-      # someone's memory: after the trial window every run carries a warning
-      # annotation in the Actions UI until the cron is reverted.
-      - name: Trial window check
-        run: |
-          if [ "$(date -u +%Y-%m-%d)" \> "$REVERT_AFTER" ]; then
-            echo "::warning title=Daily cron has outlived its trial::The daily schedule was" \
-                 "for shaking out the pipeline until $REVERT_AFTER. Revert the cron in" \
-                 ".github/workflows/capture.yml to '35 3 * * 1' (weekly) -- daily is" \
-                 "12.8 GB/yr against weekly's 1.82 GB/yr, and the registry has always said weekly."
-          else
-            echo "daily trial active until $REVERT_AFTER"
-          fi
-
       - name: Capture
         env:
           # REQUIRED, because this source declares `storage: object`. Without
@@ -111,9 +90,24 @@ jobs:
         run: wss capture --cadence "$CADENCE" --shard 1/1
 
       # THE PUBLISHABLE HALF. Raw records went to R2 above and are never
-      # committed; derive and the aggregate run here so git gets the 5.6 KB
-      # that carries no actor identity, plus the charts drawn from it.
-      - name: Derive, aggregate, redraw
+      # committed; the aggregate runs here so git gets the 5.6 KB that carries no
+      # actor identity, plus the charts drawn from it.
+      #
+      # `wss derive` and `wss schema` USED TO RUN HERE AND NO LONGER DO. Neither
+      # feeds this step: store_stats.py reads raw from R2 and the charts read
+      # public/stats-*.json. They fed only SCHEMA.md, and they were the reason
+      # captures were lost. Derive rebuilds EVERY partition from ALL raw each run
+      # -- 23.4M rows by 2026-10-06, including a closed September rewritten
+      # identically every time -- into derived/observations, which is gitignored,
+      # so the 23M rows were built, read back by `wss schema`, and discarded.
+      # On 2026-10-04, -05 and -06 the runner was killed within 1-7 minutes of
+      # derive finishing. Commit comes LAST in this job, so the capture had
+      # already succeeded and its manifest rows died with the runner.
+      #
+      # THE RULE THAT FOLLOWS: nothing reproducible may sit between an
+      # irreversible capture and the commit that records it. derive.yml still
+      # rebuilds weekly, in a job whose failure loses nothing.
+      - name: Aggregate and redraw
         env:
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
@@ -121,8 +115,6 @@ jobs:
           R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
           WSS_OBJECT_PREFIX: ${{ secrets.WSS_OBJECT_PREFIX }}
         run: |
-          wss derive
-          wss schema
           python examples/store_stats.py
           for c in examples/chart-*.py; do python "$c"; done
 
