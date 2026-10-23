@@ -73,7 +73,7 @@ redistribution, so the repository is split along that line:
 | | where | what it holds |
 | --- | --- | --- |
 | **raw records** | **R2** (`storage: object`), gitignored | full store records: username, name, description, pricing |
-| **per-actor rows** | `derived/observations/`, gitignored | entity_id, username, usage — their data in tabular form |
+| **per-actor rows** | `derived/observations/`, gitignored, **built locally only** (`wss derive`; CI no longer builds them) | entity_id, username, usage — their data in tabular form |
 | **manifest** | git | urls, hashes, byte counts — transport only, no publisher content |
 | **`public/`** | git | **aggregate only.** Bands, Lorenz points, per-partition totals, field volatility. **No actor identity of any kind** |
 

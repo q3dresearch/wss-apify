@@ -105,8 +105,11 @@ jobs:
       # already succeeded and its manifest rows died with the runner.
       #
       # THE RULE THAT FOLLOWS: nothing reproducible may sit between an
-      # irreversible capture and the commit that records it. derive.yml still
-      # rebuilds weekly, in a job whose failure loses nothing.
+      # irreversible capture and the commit that records it. There is no weekly
+      # derive.yml either, since 2026-10-23: its output is gitignored and nothing
+      # in CI reads it, so it spent 10-22 minutes rebuilding 21M rows to commit
+      # "nothing", and from 2026-10-13 the runner was killed mid-rebuild every
+      # week. Rows are rebuilt locally when wanted: `wss derive && wss schema`.
       - name: Aggregate and redraw
         env:
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
