@@ -13,103 +13,103 @@
 <line x1="28" y1="126.0" x2="852" y2="126.0" stroke="#e3e2db"/>
 <rect x="178" y="170.0" width="444.0" height="13" rx="2.5" fill="#b4472e" fill-opacity="0.9"/>
 <text x="168.0" y="180.0" font-size="10.5" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">LEAD_GENERATION</text>
-<text x="629.0" y="180.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">207,799   stopped at the wall</text>
-<text x="629.0" y="180.0" fill="#b4472e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">207,799   stopped at the wall</text>
-<rect x="178" y="189.0" width="439.4" height="13" rx="2.5" fill="#b4472e" fill-opacity="0.9"/>
+<text x="629.0" y="180.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">222,252   stopped at the wall</text>
+<text x="629.0" y="180.0" fill="#b4472e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">222,252   stopped at the wall</text>
+<rect x="178" y="189.0" width="439.1" height="13" rx="2.5" fill="#b4472e" fill-opacity="0.9"/>
 <text x="168.0" y="199.0" font-size="10.5" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">ALL</text>
-<text x="624.4" y="199.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">205,660   stopped at the wall</text>
-<text x="624.4" y="199.0" fill="#b4472e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">205,660   stopped at the wall</text>
-<rect x="178" y="208.0" width="427.3" height="13" rx="2.5" fill="#b4472e" fill-opacity="0.9"/>
+<text x="624.1" y="199.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">219,776   stopped at the wall</text>
+<text x="624.1" y="199.0" fill="#b4472e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">219,776   stopped at the wall</text>
+<rect x="178" y="208.0" width="427.1" height="13" rx="2.5" fill="#b4472e" fill-opacity="0.9"/>
 <text x="168.0" y="218.0" font-size="10.5" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">AUTOMATION</text>
-<text x="612.3" y="218.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">199,964   stopped at the wall</text>
-<text x="612.3" y="218.0" fill="#b4472e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">199,964   stopped at the wall</text>
-<rect x="178" y="227.0" width="416.5" height="13" rx="2.5" fill="#b4472e" fill-opacity="0.9"/>
+<text x="612.1" y="218.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">213,813   stopped at the wall</text>
+<text x="612.1" y="218.0" fill="#b4472e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">213,813   stopped at the wall</text>
+<rect x="178" y="227.0" width="415.7" height="13" rx="2.5" fill="#b4472e" fill-opacity="0.9"/>
 <text x="168.0" y="237.0" font-size="10.5" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">DEVELOPER_TOOLS</text>
-<text x="601.5" y="237.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">194,925   stopped at the wall</text>
-<text x="601.5" y="237.0" fill="#b4472e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">194,925   stopped at the wall</text>
-<rect x="178" y="246.0" width="363.5" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
+<text x="600.7" y="237.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">208,077   stopped at the wall</text>
+<text x="600.7" y="237.0" fill="#b4472e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">208,077   stopped at the wall</text>
+<rect x="178" y="246.0" width="363.7" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
 <text x="168.0" y="256.0" font-size="10.5" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">ECOMMERCE</text>
-<text x="548.5" y="256.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">170,130</text>
-<text x="548.5" y="256.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">170,130</text>
-<rect x="178" y="265.0" width="284.2" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
+<text x="548.7" y="256.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">182,072</text>
+<text x="548.7" y="256.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">182,072</text>
+<rect x="178" y="265.0" width="284.7" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
 <text x="168.0" y="275.0" font-size="10.5" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">SOCIAL_MEDIA</text>
-<text x="469.2" y="275.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">132,987</text>
-<text x="469.2" y="275.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">132,987</text>
-<rect x="178" y="284.0" width="219.8" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
+<text x="469.7" y="275.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">142,528</text>
+<text x="469.7" y="275.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">142,528</text>
+<rect x="178" y="284.0" width="220.1" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
 <text x="168.0" y="294.0" font-size="10.5" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">AI</text>
-<text x="404.8" y="294.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">102,879</text>
-<text x="404.8" y="294.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">102,879</text>
-<rect x="178" y="303.0" width="218.8" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
+<text x="405.1" y="294.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">110,185</text>
+<text x="405.1" y="294.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">110,185</text>
+<rect x="178" y="303.0" width="219.0" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
 <text x="168.0" y="313.0" font-size="10.5" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">BUSINESS</text>
-<text x="403.8" y="313.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">102,389</text>
-<text x="403.8" y="313.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">102,389</text>
-<rect x="178" y="322.0" width="193.2" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
+<text x="404.0" y="313.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">109,611</text>
+<text x="404.0" y="313.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">109,611</text>
+<rect x="178" y="322.0" width="194.2" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
 <text x="168.0" y="332.0" font-size="10.5" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">OTHER</text>
-<text x="378.2" y="332.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">90,410</text>
-<text x="378.2" y="332.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">90,410</text>
-<rect x="178" y="341.0" width="180.9" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
+<text x="379.2" y="332.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">97,213</text>
+<text x="379.2" y="332.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">97,213</text>
+<rect x="178" y="341.0" width="181.4" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
 <text x="168.0" y="351.0" font-size="10.5" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">JOBS</text>
-<text x="365.9" y="351.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">84,646</text>
-<text x="365.9" y="351.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">84,646</text>
-<rect x="178" y="360.0" width="139.0" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
+<text x="366.4" y="351.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">90,810</text>
+<text x="366.4" y="351.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">90,810</text>
+<rect x="178" y="360.0" width="138.9" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
 <text x="168.0" y="370.0" font-size="10.5" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">REAL_ESTATE</text>
-<text x="324.0" y="370.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">65,056</text>
-<text x="324.0" y="370.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">65,056</text>
-<rect x="178" y="379.0" width="117.2" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
+<text x="323.9" y="370.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">69,549</text>
+<text x="323.9" y="370.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">69,549</text>
+<rect x="178" y="379.0" width="117.9" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
 <text x="168.0" y="389.0" font-size="10.5" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">SEO_TOOLS</text>
-<text x="302.2" y="389.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">54,840</text>
-<text x="302.2" y="389.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">54,840</text>
-<rect x="178" y="398.0" width="102.3" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
+<text x="302.9" y="389.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">59,005</text>
+<text x="302.9" y="389.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">59,005</text>
+<rect x="178" y="398.0" width="102.4" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
 <text x="168.0" y="408.0" font-size="10.5" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">NEWS</text>
-<text x="287.3" y="408.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">47,891</text>
-<text x="287.3" y="408.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">47,891</text>
-<rect x="178" y="417.0" width="95.3" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
+<text x="287.4" y="408.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">51,245</text>
+<text x="287.4" y="408.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">51,245</text>
+<rect x="178" y="417.0" width="95.7" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
 <text x="168.0" y="427.0" font-size="10.5" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">AGENTS</text>
-<text x="280.3" y="427.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">44,613</text>
-<text x="280.3" y="427.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">44,613</text>
-<rect x="178" y="436.0" width="88.4" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
+<text x="280.7" y="427.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">47,929</text>
+<text x="280.7" y="427.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">47,929</text>
+<rect x="178" y="436.0" width="89.7" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
 <text x="168.0" y="446.0" font-size="10.5" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">VIDEOS</text>
-<text x="273.4" y="446.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">41,374</text>
-<text x="273.4" y="446.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">41,374</text>
-<rect x="178" y="455.0" width="78.0" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
+<text x="274.7" y="446.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">44,891</text>
+<text x="274.7" y="446.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">44,891</text>
+<rect x="178" y="455.0" width="77.9" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
 <text x="168.0" y="465.0" font-size="10.5" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">INTEGRATIONS</text>
-<text x="263.0" y="465.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">36,528</text>
-<text x="263.0" y="465.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">36,528</text>
-<rect x="178" y="474.0" width="76.2" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
+<text x="262.9" y="465.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">38,998</text>
+<text x="262.9" y="465.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">38,998</text>
+<rect x="178" y="474.0" width="76.7" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
 <text x="168.0" y="484.0" font-size="10.5" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">TRAVEL</text>
-<text x="261.2" y="484.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">35,666</text>
-<text x="261.2" y="484.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">35,666</text>
-<rect x="178" y="493.0" width="72.5" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
+<text x="261.7" y="484.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">38,383</text>
+<text x="261.7" y="484.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">38,383</text>
+<rect x="178" y="493.0" width="73.2" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
 <text x="168.0" y="503.0" font-size="10.5" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">MCP_SERVERS</text>
-<text x="257.5" y="503.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">33,927</text>
-<text x="257.5" y="503.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">33,927</text>
-<rect x="178" y="512.0" width="70.2" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
+<text x="258.2" y="503.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">36,626</text>
+<text x="258.2" y="503.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">36,626</text>
+<rect x="178" y="512.0" width="71.0" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
 <text x="168.0" y="522.0" font-size="10.5" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">MARKETING</text>
-<text x="255.2" y="522.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">32,835</text>
-<text x="255.2" y="522.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">32,835</text>
-<rect x="178" y="531.0" width="17.8" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
+<text x="256.0" y="522.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">35,555</text>
+<text x="256.0" y="522.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">35,555</text>
+<rect x="178" y="531.0" width="18.1" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
 <text x="168.0" y="541.0" font-size="10.5" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">EDUCATION</text>
-<text x="202.8" y="541.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">8,327</text>
-<text x="202.8" y="541.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">8,327</text>
-<rect x="178" y="550.0" width="10.8" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
+<text x="203.1" y="541.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">9,067</text>
+<text x="203.1" y="541.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">9,067</text>
+<rect x="178" y="550.0" width="11.3" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
 <text x="168.0" y="560.0" font-size="10.5" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">SPORTS</text>
-<text x="195.8" y="560.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">5,069</text>
-<text x="195.8" y="560.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">5,069</text>
-<rect x="178" y="569.0" width="8.6" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
+<text x="196.3" y="560.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">5,638</text>
+<text x="196.3" y="560.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">5,638</text>
+<rect x="178" y="569.0" width="8.8" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
 <text x="168.0" y="579.0" font-size="10.5" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">FOR_CREATORS</text>
-<text x="193.6" y="579.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">4,041</text>
-<text x="193.6" y="579.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">4,041</text>
-<rect x="178" y="588.0" width="7.1" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
+<text x="193.8" y="579.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">4,419</text>
+<text x="193.8" y="579.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">4,419</text>
+<rect x="178" y="588.0" width="7.2" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
 <text x="168.0" y="598.0" font-size="10.5" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">OPEN_SOURCE</text>
-<text x="192.1" y="598.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">3,303</text>
-<text x="192.1" y="598.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">3,303</text>
-<rect x="178" y="607.0" width="4.2" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
+<text x="192.2" y="598.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">3,588</text>
+<text x="192.2" y="598.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">3,588</text>
+<rect x="178" y="607.0" width="4.3" height="13" rx="2.5" fill="#2f6f5e" fill-opacity="0.75"/>
 <text x="168.0" y="617.0" font-size="10.5" fill="#8a8880" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums">GAMES</text>
-<text x="189.2" y="617.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">1,976</text>
-<text x="189.2" y="617.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">1,976</text>
-<text x="178.0" y="652.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="12.5" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">1,907,235 rows collapse to 83,637 distinct actors</text>
-<text x="178.0" y="652.0" fill="#0b0b0b" font-size="12.5" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">1,907,235 rows collapse to 83,637 distinct actors</text>
-<text x="178.0" y="670.0" font-size="10.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">20,604 of them appear in exactly one partition, so the categories are not redundant with each</text>
+<text x="189.3" y="617.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">2,158</text>
+<text x="189.3" y="617.0" fill="#52514e" font-size="10" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">2,158</text>
+<text x="178.0" y="652.0" fill="none" stroke="#fcfcfb" stroke-width="3.4" stroke-linejoin="round" font-size="12.5" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">2,043,388 rows collapse to 86,415 distinct actors</text>
+<text x="178.0" y="652.0" fill="#0b0b0b" font-size="12.5" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums">2,043,388 rows collapse to 86,415 distinct actors</text>
+<text x="178.0" y="670.0" font-size="10.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">21,558 of them appear in exactly one partition, so the categories are not redundant with each</text>
 <text x="178.0" y="683.0" font-size="10.5" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">other — the overlap is real actors carrying several categories.</text>
 <line x1="28" y1="742.0" x2="852" y2="742.0" stroke="#e3e2db"/>
 <text x="28.0" y="758.0" font-size="10" fill="#8a8880" text-anchor="start" font-weight="normal" style="font-variant-numeric: tabular-nums">Apify store API, one sweep 2026-09-24. A partition that ends at the wall is TRUNCATED and its visible set is popularity-ordered, so</text>

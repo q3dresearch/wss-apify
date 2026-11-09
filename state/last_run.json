@@ -1,1 +1,1 @@
-{"cadence":"weekly","sources_planned":1,"completed_at":"2026-11-02T12:15:26Z","queued_at":"2026-10-27T02:22:22Z","event":"schedule","cron":"35 3 * * 1","run_id":"41438337930","attempt":"1","workflow":"capture"}
+{"cadence":"weekly","sources_planned":1,"completed_at":"2026-11-09T12:49:28Z","queued_at":"2026-11-03T03:59:51Z","event":"schedule","cron":"35 3 * * 1","run_id":"42613571376","attempt":"1","workflow":"capture"}
